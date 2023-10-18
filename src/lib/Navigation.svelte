@@ -33,7 +33,7 @@
 	<div class="flex items-center gap-x-12">
 		<a href="/" class="-m-1.5 p-1.5">
 			<span class="sr-only">Grit & Grace Bakery</span>
-			<div class="h-16 w-24"><Logo /></div>
+			<img class="h-16 w-auto" src="https://n5qf30.p3cdn1.secureserver.net/wp-content/uploads/2017/03/cropped-cbl-header.png" alt="" />
 		</a>
 		<div class="hidden lg:flex lg:gap-x-12">
 			<a href="/contact-us" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white"
@@ -76,11 +76,11 @@
 		<div transition:fade={fade_params} class="fixed inset-0 z-50 bg-gray-900/60" />
 		<div
 			transition:fly={fly_params}
-			class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-tertiary-100 dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10"
+			class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-tertiary-100 dark:bg-gray-800 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10"
 		>
 			<div class="flex items-center justify-between">
 				<a on:click={close} href="/" class="-m-1.5 p-1.5">
-					<div class="h-12 w-20"><Logo /></div>
+					<img class="h-12 w-auto" src="https://n5qf30.p3cdn1.secureserver.net/wp-content/uploads/2017/03/cropped-cbl-header.png" alt="" />
 				</a>
 				<button
 					on:click={close}
@@ -106,7 +106,7 @@
 						<a
 							on:click={close}
 							href="/contact-us"
-							class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-500 hover:bg-tertiary-300 dark:hover:bg-gray-800"
+							class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-emerald-500 hover:bg-emerald-300 dark:hover:bg-gray-800"
 							>Contact</a
 						>
 					</div>

@@ -8,6 +8,8 @@
 	import { Toast } from '@skeletonlabs/skeleton';
 	import Navigation from '$lib/Navigation.svelte';
 	import Footer from '$lib/Footer.svelte';
+
+	const bus_name = "Christian Brother's Lining Co."
 </script>
 
 <svelte:head>
@@ -19,6 +21,6 @@
 	<header class="absolute inset-x-0 top-0 z-50">
 		<Navigation />
 	</header>
-	<slot />
-	<Footer />
+	<slot {bus_name}/>
+	<Footer {bus_name} />
 </div>

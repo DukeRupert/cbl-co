@@ -4,6 +4,7 @@
 	export let twitter = '';
 	export let github = '';
 	export let youtube = '';
+	export let bus_name = "Business name";
 </script>
 
 <footer class="bg-white dark:bg-gray-950">
@@ -70,7 +71,7 @@
 		</div>
 		<div class="mt-8 md:order-1 md:mt-0">
 			<p class="text-center text-xs leading-5 text-gray-500">
-				&copy; 2023 Grit & Grace Bakery, All rights reserved.
+				&copy; 2023 {bus_name}, All rights reserved.
 			</p>
 		</div>
 	</div>
