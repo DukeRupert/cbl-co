@@ -9,9 +9,9 @@
 	import { onMount } from 'svelte';
 	import { quadOut } from 'svelte/easing';
 
-	const title = 'Private music lessons in Helena, MT';
+	const title = "Christian Brother's Lining Co, California's CIPP experts! ";
 	const body =
-		'Unlock your musical potential with private voice, piano, violin, or guitar lessons. We empower you to master your chosen instrument while discovering the joy of creating beautiful music.';
+		"We're your go-to source for Cured-In-Place Piping (CIPP) services, dedicated to rehabilitating aging pipelines for municipalities and cities across the state. With our eco-friendly, cost-effective, and minimally disruptive approach, we're committed to ensuring California's underground infrastructure remains strong, reliable, and environmentally responsible.";
 	const hero_photos = [piano, violin, voice, guitar];
 	let index = 0;
 
@@ -33,17 +33,15 @@
 				<h1
 					class="mt-24 text-4xl font-bold tracking-tight dark:text-white text-black transition-colors duration-300 ease-out sm:mt-10 sm:text-6xl"
 				>
-					Baking Up <span
-						class="bg-clip-text text-transparent box-decoration-clone bg-gradient-to-br from-[#F25E3D] to-[#F29441]"
-						>Happiness</span
-					> in Helena, MT
+					Revive Your <span
+						class="bg-clip-text text-transparent box-decoration-clone bg-gradient-to-br to-[#618C03] from-[#C0D904]"
+						>Pipes</span
+					>
 				</h1>
 				<p
 					class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 transition-colors duration-300 ease-out"
 				>
-					Picture this: cozy evenings, the scent of freshly baked sourdough filling your home, and
-					the delightful crunch of seasonal cookies with every bite. Make your holiday season extra
-					special with our home-baked products!
+					{body}
 				</p>
 				<div class="mt-10 flex items-center gap-x-6">
 					<a href="/contact-us" class="btn variant-filled-primary">Order today</a>
