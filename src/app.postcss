@@ -1,0 +1,19 @@
+/*place global styles here */
+html,
+body {
+	@apply h-full;
+}
+
+@font-face {
+	font-family: 'Quicksand';
+	src: url('/fonts/Quicksand.ttf');
+	font-display: swap;
+}
+
+.gradient-heading {
+	@apply bg-clip-text text-transparent box-decoration-clone;
+	/* Direction */
+	@apply bg-gradient-to-br;
+	/* Color Stops */
+	@apply from-tertiary-500 to-secondary-500;
+}
