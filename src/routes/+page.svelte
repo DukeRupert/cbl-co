@@ -2,7 +2,34 @@
   export let bus_name = "Christian Brother's Lining Co."
 	const title = "Reviving Your Pipes";
 	const body =
-		"We're your go-to source for Cured-In-Place Piping (CIPP) services, dedicated to rehabilitating aging pipelines for municipalities and cities across the state. With our eco-friendly, cost-effective, and minimally disruptive approach, we're committed to ensuring California's underground infrastructure remains strong, reliable, and environmentally responsible.";
+		"Christian Brother's Lining Co. is your go-to source for Cured-In-Place Piping (CIPP) services, dedicated to rehabilitating aging pipelines for municipalities and cities across the state since 2007. With our eco-friendly, cost-effective, and minimally disruptive approach, we're committed to ensuring California's underground infrastructure remains strong, reliable, and environmentally responsible.";
+
+  const services = [
+  {
+    "title": "Install CIPP",
+    "body": "Our expert team specializes in the installation of Cured-In-Place Piping (CIPP), offering a trenchless solution that rehabilitates pipelines with minimal disruption. This innovative technology extends the life of your pipes, creating a new, corrosion-resistant lining within the existing ones."
+  },
+  {
+    "title": "CCTV Pipelines of All Sizes",
+    "body": "We provide comprehensive Closed-Circuit Television (CCTV) inspection services for pipelines of all sizes. Our state-of-the-art equipment and certified operators ensure thorough inspections, identifying issues and preventing potential problems."
+  },
+  {
+    "title": "Operators are PACP/NASSCO Certified",
+    "body": "Our certified operators adhere to industry standards and best practices. With PACP (Pipeline Assessment and Certification Program) and NASSCO (National Association of Sewer Service Companies) certifications, you can trust in their expertise and professionalism."
+  },
+  {
+    "title": "Hydro Jet and Remove Roots",
+    "body": "Say goodbye to clogs and root intrusions with our high-pressure hydro jetting services. We'll efficiently remove blockages and roots, restoring the flow and integrity of your pipelines."
+  },
+  {
+    "title": "Certified Installer for MTC Liner",
+    "body": "As a certified installer for MTC Liner, we ensure the highest quality installation of this innovative lining material. The MTC Liner offers enhanced durability and corrosion resistance, extending the lifespan of your pipelines."
+  },
+  {
+    "title": "Mobile Steam Truck Rental",
+    "body": "Our mobile steam truck rental service provides a versatile solution for various cleaning and maintenance needs. Whether it's cleaning, degreasing, or other steam-based tasks, our equipment is ready to meet your requirements on the go."
+  }
+]
 
   const advantages = [
   {
@@ -30,6 +57,18 @@
     "body": "CIPP preserves landscapes and infrastructure during pipe rehabilitation."
   }
 ]
+
+  const clients = [
+  "City of San Jose",
+  "Mill Valley",
+  "Napa Sanitation",
+  "San Carlos",
+  "Millbrae",
+  "Burlingame",
+  "Morgan Hill",
+  "Monterey"
+]
+
 </script>
 
 <svelte:head>
@@ -57,8 +96,34 @@
 		<div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white dark:from-gray-950 sm:h-32"></div>
 	  </div>
 
+    <!-- Services -->
+  <div class="py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      <div>
+        <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">Our Services</h2>
+        <p class="mt-6 text-base leading-7 text-gray-600 dark:text-gray-300">With a dedicated team of experts, state-of-the-art equipment, and a commitment to excellence, we are your trusted partner for all things pipeline-related. Explore our services below to discover how we can cater to your specific requirements and keep your pipelines in optimal condition.</p>
+      </div>
+      <dl class="col-span-2 grid grid-cols-1 gap-x-8 gap-y-10 text-base leading-7 text-gray-600 dark:text-gray-300 sm:grid-cols-2 lg:gap-y-16">
+        {#each services as {title, body}}
+          <div class="relative pl-9">
+            <dt class="font-semibold text-gray-900 dark:text-gray-100">
+              <svg class="absolute left-0 top-1 h-5 w-5 text-emerald-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              {title}
+            </dt>
+            <dd class="mt-2">{body}</dd>
+          </div>
+        {/each}
+      </dl>
+    </div>
+  </div>
+</div>
+
+
     <!-- Content section -->
-    <div class="mx-auto max-w-7xl px-6 sm:mt-0 lg:px-8 ">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-32">
       <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">Our mission</h2>
         <div class="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
@@ -126,13 +191,11 @@
         </svg>
       </div>
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 class="text-center text-lg font-semibold leading-8 text-gray-900 dark:text-gray-100">Trusted by the world’s most innovative teams</h2>
-        <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-          <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" width="158" height="48">
-          <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" width="158" height="48">
-          <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" width="158" height="48">
-          <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48">
-          <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" width="158" height="48">
+        <h2 class="text-center text-lg font-semibold leading-8 text-gray-900 dark:text-gray-100">Municipalities we have proudly worked with</h2>
+        <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+          {#each clients as client}
+             <div class="col-span-2 flex text-center justify-center lg:col-span-1 text-2xl font-semibold text-gray-900 dark:text-gray-100">{client}</div>
+          {/each}
         </div>
       </div>
     </div>
