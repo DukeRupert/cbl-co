@@ -33,16 +33,20 @@
 	<div class="flex items-center gap-x-12">
 		<a href="/" class="-m-1.5 p-1.5">
 			<span class="sr-only">Grit & Grace Bakery</span>
-			<img class="h-16 w-auto" src="https://n5qf30.p3cdn1.secureserver.net/wp-content/uploads/2017/03/cropped-cbl-header.png" alt="" />
+			<img
+				class="h-16 w-auto"
+				src="https://n5qf30.p3cdn1.secureserver.net/wp-content/uploads/2017/03/cropped-cbl-header.png"
+				alt=""
+			/>
 		</a>
 		<div class="hidden lg:flex lg:gap-x-12">
 			<a href="/contact-us" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white"
 				>Contact</a
 			>
-			<div class="flex">
-				<LightSwitch />
-			</div>
 		</div>
+	</div>
+	<div class="flex">
+		<LightSwitch />
 	</div>
 	<div class="flex lg:hidden">
 		<button
@@ -80,7 +84,11 @@
 		>
 			<div class="flex items-center justify-between">
 				<a on:click={close} href="/" class="-m-1.5 p-1.5">
-					<img class="h-12 w-auto" src="https://n5qf30.p3cdn1.secureserver.net/wp-content/uploads/2017/03/cropped-cbl-header.png" alt="" />
+					<img
+						class="h-12 w-auto"
+						src="https://n5qf30.p3cdn1.secureserver.net/wp-content/uploads/2017/03/cropped-cbl-header.png"
+						alt=""
+					/>
 				</a>
 				<button
 					on:click={close}

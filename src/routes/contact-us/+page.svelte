@@ -20,7 +20,7 @@
 
 	const title = 'Contact us';
 	const body =
-		"Don't settle for homemade when you can elevate your meal and make it truly special with our exceptional products baked fresh in Helena, MT.";
+		"Say goodbye to costly excavations and environmental disruptions while ensuring the longevity and sustainability of your underground infrastructure. Embrace the future with us, and let's get your pipes flowing smoothly again!";
 	const page_header = {
 		eyebrow: title,
 		title: "Let's get started",
@@ -29,7 +29,7 @@
 </script>
 
 <svelte:head>
-	<title>Grit & Grace Bakery | {title}</title>
+	<title>Christian Brother's Lining Co. | {title}</title>
 	<meta name="description" content={body} />
 </svelte:head>
 
@@ -40,20 +40,20 @@
 		<div class="relative px-6 pb-20 pt-8 sm:pt-16 lg:static lg:px-8 lg:py-24">
 			<div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
 				<div>
-					<h2 class="text-base font-semibold leading-7 text-primary-500">How it works</h2>
+					<h2 class="text-base font-semibold leading-7 text-emerald-500">How it works</h2>
 					<p
 						class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl"
 					>
-						Place your order today
+						Contact us today
 					</p>
 					<p class="mt-6 text-base leading-7 text-gray-600 dark:text-gray-300">
-						Follow my social media for weekly bake announcements. If you would like to place a
-						special order for an event please use this form or contact me using the information
-						listed below.
+						We're eager to hear from you! Your thoughts, questions, and ideas matter to us. Please
+						don't hesitate to reach out. We're here and ready to assist you. Contact us today and
+						let's start a conversation!
 					</p>
 				</div>
 				<dl class="mt-10 space-y-4 text-base leading-7 text-gray-600 dark:text-gray-300">
-					<div class="flex gap-x-4">
+					<!-- <div class="flex gap-x-4">
 						<dt class="flex-none">
 							<span class="sr-only">Address</span>
 							<svg
@@ -72,7 +72,7 @@
 							</svg>
 						</dt>
 						<dd>652 Jena Loop<br />Helena, MT 59602</dd>
-					</div>
+					</div> -->
 					<div class="flex gap-x-4">
 						<dt class="flex-none">
 							<span class="sr-only">Telephone</span>
@@ -93,11 +93,11 @@
 						</dt>
 						<dd>
 							<a class="hover:text-white dark:hover:text-gray-900" href="tel:+1 (555) 234-5678"
-								>+1 (406) 471-8508</a
+								>+1 (661) 816-4291</a
 							>
 						</dd>
 					</div>
-					<!-- <div class="flex gap-x-4">
+					<div class="flex gap-x-4">
 						<dt class="flex-none">
 							<span class="sr-only">Email</span>
 							<svg
@@ -117,10 +117,10 @@
 						</dt>
 						<dd>
 							<a class="hover:text-white dark:hover:text-gray-900" href="mailto:hello@example.com"
-								>ebonyivorylove@gmail.com</a
+								>tom@cblining.com</a
 							>
 						</dd>
-					</div> -->
+					</div>
 				</dl>
 			</div>
 		</div>
@@ -139,7 +139,7 @@
 								name="first"
 								id="first"
 								autocomplete="given-name"
-								class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary-500 sm:text-sm sm:leading-6"
+								class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-emerald-500 sm:text-sm sm:leading-6"
 								required
 								aria-invalid={$errors.first ? 'true' : undefined}
 								bind:value={$form.first}
@@ -162,7 +162,7 @@
 								name="last"
 								id="last"
 								autocomplete="family-name"
-								class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary-500 sm:text-sm sm:leading-6"
+								class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-emerald-500 sm:text-sm sm:leading-6"
 								required
 								aria-invalid={$errors.last ? 'true' : undefined}
 								bind:value={$form.last}
@@ -185,7 +185,7 @@
 								name="email"
 								id="email"
 								autocomplete="email"
-								class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary-500 sm:text-sm sm:leading-6"
+								class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-emerald-500 sm:text-sm sm:leading-6"
 								required
 								aria-invalid={$errors.email ? 'true' : undefined}
 								bind:value={$form.email}
@@ -208,7 +208,7 @@
 								name="phone"
 								id="phone"
 								autocomplete="tel"
-								class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary-500 sm:text-sm sm:leading-6"
+								class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-emerald-500 sm:text-sm sm:leading-6"
 								required
 								aria-invalid={$errors.phone ? 'true' : undefined}
 								bind:value={$form.phone}
@@ -234,7 +234,7 @@
 								bind:value={$form.message}
 								{...$constraints.message}
 								rows="4"
-								class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-white/10 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-500 sm:text-sm sm:leading-6"
+								class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-white/10 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-500 sm:text-sm sm:leading-6"
 							/>
 							{#if $errors.message}
 								<span class="text-error-500">{$errors.message}</span>
@@ -243,7 +243,11 @@
 					</div>
 				</div>
 				<div class="mt-8 flex justify-end">
-					<button type="submit" class="btn variant-filled-primary">Send message</button>
+					<button
+						type="submit"
+						class="rounded-md bg-emerald-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
+						>Send message</button
+					>
 				</div>
 			</div>
 		</form>
