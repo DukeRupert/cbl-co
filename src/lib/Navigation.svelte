@@ -80,7 +80,7 @@
 		<div transition:fade={fade_params} class="fixed inset-0 z-50 bg-gray-900/60" />
 		<div
 			transition:fly={fly_params}
-			class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-tertiary-100 dark:bg-gray-800 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10"
+			class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-gray-800 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10"
 		>
 			<div class="flex items-center justify-between">
 				<a on:click={close} href="/" class="-m-1.5 p-1.5">
@@ -93,7 +93,7 @@
 				<button
 					on:click={close}
 					type="button"
-					class="-m-2.5 rounded-md p-2.5 text-secondary-500 dark:text-tertiary-600"
+					class="-m-2.5 rounded-md p-2.5 text-gray-400 dark:text-gray-300"
 				>
 					<span class="sr-only">Close menu</span>
 					<svg
