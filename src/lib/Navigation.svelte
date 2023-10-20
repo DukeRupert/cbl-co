@@ -36,7 +36,7 @@
 			<img
 				class="h-16 w-auto"
 				src="https://n5qf30.p3cdn1.secureserver.net/wp-content/uploads/2017/03/cropped-cbl-header.png"
-				alt=""
+				alt="christian brother's lining company logo"
 			/>
 		</a>
 		<div class="hidden lg:flex lg:gap-x-12">

@@ -7,9 +7,15 @@
 	export let bus_name = "Business name";
 </script>
 
-<footer class="bg-white dark:bg-gray-950">
-	<div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
-		<div class="flex justify-center space-x-6 md:order-2">
+<footer class="bg-white dark:bg-gray-950" aria-labelledby="footer-heading">
+	<h2 id="footer-heading" class="sr-only">Footer</h2>
+	<div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+	  <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+		<div class="space-y-8">
+		  <img class="h-12" src="https://n5qf30.p3cdn1.secureserver.net/wp-content/uploads/2017/03/cropped-cbl-header.png"
+		  alt="christian brother's lining company logo">
+		  <p class="text-sm leading-6 text-gray-600 dark:text-gray-400">Dedicated to rehabilitating aging pipelines for municipalities and cities since 2007.</p>
+		  <div class="flex space-x-6">
 			{#if facebook}
 				<a href={facebook} class="text-gray-400 dark:text-gray-600 hover:text-gray-500">
 					<span class="sr-only">Facebook</span>
@@ -68,11 +74,42 @@
 					</svg>
 				</a>
 			{/if}
+		  </div>
 		</div>
-		<div class="mt-8 md:order-1 md:mt-0">
-			<p class="text-center text-xs leading-5 text-gray-500">
-				&copy; 2023 {bus_name}, All rights reserved.
-			</p>
+		<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+		  <div class="md:grid md:grid-cols-2 md:gap-8">
+			<div>
+			  <h3 class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">Navigation</h3>
+			  <ul role="list" class="mt-6 space-y-4">
+				<li>
+				  <a href="/" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Home</a>
+				</li>
+				<li>
+				  <a href="/what-is-cipp" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">What is CIPP?</a>
+				</li>
+				<li>
+				  <a href="/contact-us" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Contact Us</a>
+				</li>
+			  </ul>
+			</div>
+			<div class="mt-10 md:mt-0">
+			  <h3 class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">Legal</h3>
+			  <ul role="list" class="mt-6 space-y-4">
+				  <li>
+					<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Privacy</a>
+				  </li>
+				  <li>
+					<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Terms</a>
+				  </li>
+			  </ul>
+			</div>
+		  </div>
+		  
 		</div>
+	  </div>
+	  <div class="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
+		<p class="text-xs leading-5 text-gray-500">&copy; 2023 {bus_name}, All rights reserved.</p>
+	  </div>
 	</div>
-</footer>
+  </footer>
+  
