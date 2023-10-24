@@ -1,6 +1,7 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/PageHeader.svelte';
-	import Img from '@zerodevx/svelte-img/index';
+	import bad_pipe from '$lib/assets/bad_pipe.jpg?as=run'
+	import Img from '@zerodevx/svelte-img';
 	import { page } from '$app/stores';
 
 	const title = 'What is CIPP?';
@@ -30,7 +31,7 @@
 			</div>
 			<div class="flex-auto lg:col-span-7 xl:col-span-8">
 			  <div class="aspect-[5/2] overflow-hidden rounded-lg bg-gray-100">
-				<img src="https://tailwindui.com/img/ecommerce-images/product-feature-04-detail-03.jpg" alt="Printed photo of bag being tossed into the sky on top of grass." class="object-cover object-center">
+				<Img src={bad_pipe} alt="Printed photo of bag being tossed into the sky on top of grass." class="object-cover object-center" />
 			  </div>
 			</div>
 		  </div>
