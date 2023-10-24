@@ -92,7 +92,7 @@
 	};
 </script>
 
-<Seo data={seoData} />
+<!-- <Seo data={seoData} /> -->
 <main class="isolate bg-white dark:bg-gray-950">
 	<Hero {title} {body} />
 	<Services {services} />
