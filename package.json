@@ -40,6 +40,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"postmark": "^3.0.19"
+		"postmark": "^3.0.19",
+		"schema-dts": "^1.1.2"
 	}
 }

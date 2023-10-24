@@ -27,6 +27,11 @@
 		duration: 150,
 		easing: quadOut
 	};
+
+	const links = [
+		{ label: 'Contact Us', href: '/contact-us' },
+		{ label: 'What is CIPP?', href: '/what-is-cipp' }
+	];
 </script>
 
 <nav class="flex items-center justify-between p-6 lg:px-8 gap-x-6" aria-label="Global">
@@ -40,9 +45,9 @@
 			/>
 		</a>
 		<div class="hidden lg:flex lg:gap-x-12">
-			<a href="/contact-us" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white"
-				>Contact</a
-			>
+			{#each links as { label, href }, i}
+				<a {href} class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">{label}</a>
+			{/each}
 		</div>
 	</div>
 	<div class="flex">
@@ -111,12 +116,14 @@
 			<div class="mt-6 flow-root">
 				<div class="-my-6 divide-y divide-gray-700/25 dark:divide-gray-500/25">
 					<div class="space-y-2 py-6">
-						<a
-							on:click={close}
-							href="/contact-us"
-							class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-emerald-500 hover:bg-emerald-300 dark:hover:bg-gray-800"
-							>Contact</a
-						>
+						{#each links as { label, href }, i}
+							<a
+								on:click={close}
+								{href}
+								class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-emerald-500 hover:bg-emerald-300 dark:hover:bg-gray-800"
+								>{label}</a
+							>
+						{/each}
 					</div>
 				</div>
 			</div>
