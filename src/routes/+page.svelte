@@ -6,7 +6,6 @@
 	import Cta from '$lib/components/Cta.svelte';
 	import Features from '$lib/components/Features.svelte';
 	import LogoCloud from '$lib/components/LogoCloud.svelte';
-	import Team from '$lib/components/Team.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 
 	const title = 'Reviving Your Pipes';
@@ -19,6 +18,10 @@
 			body: 'Our expert team specializes in the installation of Cured-In-Place Piping (CIPP), offering a trenchless solution that rehabilitates pipelines with minimal disruption. This innovative technology extends the life of your pipes, creating a new, corrosion-resistant lining within the existing ones.'
 		},
 		{
+			title: 'Certified Installer for MTC Liner',
+			body: 'As a certified installer for <a href="https://www.aegion.com/mtc" class="text-tango-500" target="_blank" rel=noreferrer>MTC Liner</a>, we ensure the highest quality installation of this innovative lining material. The MTC Liner offers enhanced durability and corrosion resistance, extending the lifespan of your pipelines.'
+		},
+		{
 			title: 'CCTV Pipelines of All Sizes',
 			body: 'We provide comprehensive Closed-Circuit Television (CCTV) inspection services for pipelines of all sizes. Our state-of-the-art equipment and certified operators ensure thorough inspections, identifying issues and preventing potential problems.'
 		},
@@ -29,10 +32,6 @@
 		{
 			title: 'Hydro Jet and Remove Roots',
 			body: "Say goodbye to clogs and root intrusions with our high-pressure hydro jetting services. We'll efficiently remove blockages and roots, restoring the flow and integrity of your pipelines."
-		},
-		{
-			title: 'Certified Installer for MTC Liner',
-			body: 'As a certified installer for MTC Liner, we ensure the highest quality installation of this innovative lining material. The MTC Liner offers enhanced durability and corrosion resistance, extending the lifespan of your pipelines.'
 		},
 		{
 			title: 'Mobile Steam Truck Rental',
@@ -107,6 +106,5 @@
 	</div>
 	<Features features={advantages} />
 	<LogoCloud logos={clients} />
-	<Team />
 	<Cta />
 </main>

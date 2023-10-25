@@ -120,7 +120,7 @@
 							<a
 								on:click={close}
 								{href}
-								class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-emerald-500 hover:bg-emerald-300 dark:hover:bg-gray-800"
+								class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black dark:text-white hover:bg-safetyGreen-500 dark:hover:bg-tango-700"
 								>{label}</a
 							>
 						{/each}

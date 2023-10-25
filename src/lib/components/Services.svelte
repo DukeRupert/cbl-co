@@ -32,7 +32,7 @@
 					<div class="relative pl-9">
 						<dt class="font-semibold text-gray-900 dark:text-gray-100">
 							<svg
-								class="absolute left-0 top-1 h-5 w-5 text-emerald-500"
+								class="absolute left-0 top-1 h-5 w-5 text-tango-500 dark:text-safetyGreen-500"
 								viewBox="0 0 20 20"
 								fill="currentColor"
 								aria-hidden="true"
@@ -45,7 +45,7 @@
 							</svg>
 							{title}
 						</dt>
-						<dd class="mt-2">{body}</dd>
+						<dd class="mt-2">{@html body}</dd>
 					</div>
 				{/each}
 			</dl>
