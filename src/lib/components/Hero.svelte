@@ -1,11 +1,13 @@
 <script lang="ts">
+	import HeroImage from '$lib/assets/AdobeStock_632539423.jpeg?as=run';
+	import Img from '@zerodevx/svelte-img';
 	export let title = 'Title';
 	export let body = 'Body';
 </script>
 
 <!-- Hero section -->
 <div
-	class="relative isolate overflow-hidden bg-gradient-to-b from-safetyGreen-500/10 dark:from-tango-200/20 pt-14"
+	class="relative isolate overflow-hidden bg-gradient-to-b from-safetyGreen-500/80 dark:from-tango-500/80 pt-14"
 >
 	<div
 		class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white dark:bg-gray-900 shadow-xl shadow-safetyGreen-500/20 dark:shadow-tango-700/10 ring-1 ring-safetyGreen-200 dark:ring-tango-800 sm:-mr-80 lg:-mr-96"
@@ -13,14 +15,14 @@
 	/>
 	<div class="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
 		<div
-			class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8"
+			class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6"
 		>
 			<h1
-				class="max-w-2xl text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl lg:col-span-2 xl:col-auto"
+				class="max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl lg:col-span-2 text-gray-900 dark:text-gray-100"
 			>
 				{title}
 			</h1>
-			<div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
+			<div class="mt-6 max-w-xl lg:mt-0">
 				<p class="text-lg leading-8 text-gray-600 dark:text-gray-300">{body}</p>
 				<div class="mt-10 flex items-center gap-x-6">
 					<a
@@ -47,10 +49,11 @@
 					>
 				</div>
 			</div>
-			<img
-				src="https://images.unsplash.com/photo-1567532900872-f4e906cbf06a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1280&q=80"
+			<Img
+				src={HeroImage}
 				alt=""
 				class="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
+				loading="eager"
 			/>
 		</div>
 	</div>

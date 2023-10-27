@@ -1,11 +1,11 @@
 <!-- CTA -->
-<div class="bg-safetyGreen-500 dark:bg-safetyGreen-700 mt-32 sm:mt-48">
+<div class="bg-gradient-to-t from-safetyGreen-500 dark:from-tango-500/80 mt-32 sm:mt-48">
 	<div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
 		<div class="mx-auto max-w-2xl text-center">
-			<h2 class="text-3xl font-bold tracking-tight text-black sm:text-4xl">
+			<h2 class="text-3xl font-bold tracking-tight text-black dark:text-white sm:text-4xl">
 				Reimagine Your Pipes.<br />Renew Your Infrastructure!
 			</h2>
-			<p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-900">
+			<p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-900 dark:text-gray-100">
 				Say goodbye to costly excavations and environmental disruptions while ensuring the longevity
 				and sustainability of your underground infrastructure. Embrace the future with us, and let's
 				get your pipes flowing smoothly again!
@@ -25,7 +25,7 @@
 				>
 				<a
 					href="/#services"
-					class="text-sm font-semibold leading-6 text-black dark:hover:text-gray-100"
+					class="text-sm font-semibold leading-6 text-black dark:text-white dark:hover:text-gray-100"
 					>Learn more <span aria-hidden="true">→</span></a
 				>
 			</div>

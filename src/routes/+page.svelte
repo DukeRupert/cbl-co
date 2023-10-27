@@ -7,6 +7,8 @@
 	import Features from '$lib/components/Features.svelte';
 	import LogoCloud from '$lib/components/LogoCloud.svelte';
 	import Seo from '$lib/components/Seo.svelte';
+	import Img from '@zerodevx/svelte-img';
+	import CleanPipe from '$lib/assets/AdobeStock_640644502.jpeg?as=run';
 
 	const title = 'Reviving Your Pipes';
 	const body =
@@ -98,11 +100,7 @@
 	<OurMission />
 	<!-- Image section -->
 	<div class="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
-		<img
-			src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-			alt=""
-			class="aspect-[5/2] w-full object-cover xl:rounded-3xl"
-		/>
+		<Img src={CleanPipe} alt="" class="aspect-[5/2] w-full object-cover xl:rounded-3xl" />
 	</div>
 	<Features features={advantages} />
 	<LogoCloud logos={clients} />
