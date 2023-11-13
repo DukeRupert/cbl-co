@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { BUSINESS_NAME, ROOT_URL } from '$lib/stores/company';
 	import Hero from '$lib/components/Hero.svelte';
 	import Services from '$lib/components/Services.svelte';
@@ -91,6 +92,8 @@
 			height: 2635
 		}
 	};
+
+	console.log($page);
 </script>
 
 <!-- <Seo data={seoData} /> -->

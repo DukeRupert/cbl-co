@@ -1,10 +1,10 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import bad_pipe from '$lib/assets/bad_pipe.jpg?as=run';
 	import going_in from '$lib/assets/48_inch_going_in.jpg?as=run';
 	import cured from '$lib/assets/liner_in_mh.jpg?as=run';
 	import Img from '@zerodevx/svelte-img';
-	import { page } from '$app/stores';
 	import Cta from '$lib/components/Cta.svelte';
 
 	const title = 'What is CIPP?';
@@ -15,6 +15,8 @@
 		title: 'Cured-In-Place-Pipe Lining',
 		body: body
 	};
+
+	console.log($page);
 </script>
 
 <svelte:head>

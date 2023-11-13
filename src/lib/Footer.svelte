@@ -1,10 +1,10 @@
 <script lang="ts">
-	export let facebook = 'https://www.facebook.com/gritandgracebakery';
+	export let facebook = '';
 	export let instagram = '';
 	export let twitter = '';
 	export let github = '';
 	export let youtube = '';
-	export let bus_name = 'Business name';
+	export let bus_name = "Christian Brother's Lining Co.";
 </script>
 
 <footer class="bg-white dark:bg-gray-900" aria-labelledby="footer-heading">

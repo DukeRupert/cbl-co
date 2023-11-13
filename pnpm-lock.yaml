@@ -70,6 +70,9 @@ devDependencies:
   svelte-intersection-observer:
     specifier: ^0.10.1
     version: 0.10.1
+  svelte-seo:
+    specifier: ^1.5.4
+    version: 1.5.4(typescript@5.1.6)
   sveltekit-superforms:
     specifier: ^1.6.0
     version: 1.6.0(@sveltejs/kit@1.22.6)(svelte@3.59.2)(zod@3.22.2)
@@ -2086,7 +2089,6 @@ packages:
       typescript: '>=4.1.0'
     dependencies:
       typescript: 5.1.6
-    dev: false
 
   /semver@7.5.4:
     resolution: {integrity: sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==}
@@ -2345,6 +2347,14 @@ packages:
       strip-indent: 3.0.0
       svelte: 3.59.2
       typescript: 5.1.6
+    dev: true
+
+  /svelte-seo@1.5.4(typescript@5.1.6):
+    resolution: {integrity: sha512-pevGUiWkqLrSWXVkxE0SbkBLNsz2dVaiK8/kBq2eUHYdyzuPEZGbqtUARyJZHouv28xre7IU9t0VnoYt8d4kzA==}
+    dependencies:
+      schema-dts: 1.1.2(typescript@5.1.6)
+    transitivePeerDependencies:
+      - typescript
     dev: true
 
   /svelte@3.59.2:
