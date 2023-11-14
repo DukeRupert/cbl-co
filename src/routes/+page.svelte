@@ -21,7 +21,7 @@
 		},
 		{
 			title: 'Certified Installer for MTC Liner',
-			body: 'As a certified installer for <a href="https://www.aegion.com/mtc" class="text-tango-500" target="_blank" rel=noreferrer>MTC Liner</a>, we ensure the highest quality installation of this innovative lining material. The MTC Liner offers enhanced durability and corrosion resistance, extending the lifespan of your pipelines.'
+			body: 'As a certified installer for <a href="https://www.aegion.com/mtc" class="text-tango-500 underline underline-offset-2" target="_blank" rel=noreferrer>MTC Liner</a>, we ensure the highest quality installation of this innovative lining material. The MTC Liner offers enhanced durability and corrosion resistance, extending the lifespan of your pipelines.'
 		},
 		{
 			title: 'CCTV Pipelines of All Sizes',
@@ -100,7 +100,12 @@
 	<OurMission />
 	<!-- Image section -->
 	<div class="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
-		<enhanced:img src={imgUrl} alt="" class="aspect-[5/2] w-full object-cover xl:rounded-3xl" />
+		<enhanced:img
+			src={imgUrl}
+			alt=""
+			class="aspect-[5/2] w-full object-cover xl:rounded-3xl"
+			sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
+		/>
 	</div>
 	<Features features={advantages} />
 	<LogoCloud logos={clients} />

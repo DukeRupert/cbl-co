@@ -98,11 +98,19 @@
 		>
 			<div class="flex items-center justify-between">
 				<a on:click={close} href="/" class="-m-1.5 p-1.5">
-					<img
-						class="h-12 w-auto"
-						src="https://n5qf30.p3cdn1.secureserver.net/wp-content/uploads/2017/03/cropped-cbl-header.png"
-						alt=""
-					/>
+					{#if $modeCurrent}
+						<enhanced:img
+							class="h-12 w-auto"
+							src={logoLight}
+							alt="christian brother's lining company logo"
+						/>
+					{:else}
+						<enhanced:img
+							class="h-12 w-auto"
+							src={logoDark}
+							alt="christian brother's lining company logo"
+						/>
+					{/if}
 				</a>
 				<button
 					on:click={close}

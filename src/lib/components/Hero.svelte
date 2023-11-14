@@ -52,6 +52,7 @@
 				src={imgUrl}
 				alt="A smiling worker wearing a safety vest and construction helmet."
 				class="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
+				sizes="(min-width:1920px) 580px, (min-width:1080px) 480px, (min-width:768px) 400px"
 				loading="eager"
 			/>
 		</div>
