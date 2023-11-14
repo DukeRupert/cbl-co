@@ -37,7 +37,7 @@
 						<dt class="text-base leading-7 text-gray-600 dark:text-gray-300">
 							Linear Feet of Restored Pipelines
 						</dt>
-						<dd class="text-5xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">
+						<dd class="text-5xl font-semibold tracking-tight text-tango-500 dark:text-safetyGreen-500 hover:animate-pulse">
 							380,000
 						</dd>
 					</div>
@@ -45,7 +45,7 @@
 						<dt class="text-base leading-7 text-gray-600 dark:text-gray-300">
 							Successful Projects
 						</dt>
-						<dd class="text-5xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">
+						<dd class="text-5xl font-semibold tracking-tight text-tango-500 dark:text-safetyGreen-500 hover:animate-pulse">
 							400
 						</dd>
 					</div>
@@ -53,7 +53,7 @@
 						<dt class="text-base leading-7 text-gray-600 dark:text-gray-300">
 							Sea Lions Displaced
 						</dt>
-						<dd class="text-5xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">
+						<dd class="text-5xl font-semibold tracking-tight text-tango-500 dark:text-safetyGreen-500 hover:animate-pulse">
 							0
 						</dd>
 					</div>

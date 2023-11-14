@@ -1,4 +1,6 @@
 <script lang="ts">
+	import FadeIn from "$lib/FadeIn.svelte";
+
 	interface Feature {
 		title: string;
 		body: string;
@@ -22,11 +24,13 @@
 	<dl
 		class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
 	>
-		{#each features as { title, body }}
-			<div>
-				<dt class="font-semibold text-gray-900 dark:text-gray-100">{title}</dt>
-				<dd class="mt-1 text-gray-600 dark:text-gray-300">{body}</dd>
-			</div>
+		{#each features as { title, body }, i}
+			<FadeIn {i}>
+				<div>
+					<dt class="font-semibold text-gray-900 dark:text-gray-100">{title}</dt>
+					<dd class="mt-1 text-gray-600 dark:text-gray-300">{body}</dd>
+				</div>
+			</FadeIn>
 		{/each}
 	</dl>
 </div>
