@@ -1,8 +1,7 @@
 <script lang="ts">
-	import HeroImage from '$lib/assets/AdobeStock_632539423.jpeg?as=run';
-	import Img from '@zerodevx/svelte-img';
 	export let title = 'Title';
 	export let body = 'Body';
+	import imgUrl from '$lib/assets/AdobeStock_632539423.jpeg?enhanced';
 </script>
 
 <!-- Hero section -->
@@ -49,9 +48,9 @@
 					>
 				</div>
 			</div>
-			<Img
-				src={HeroImage}
-				alt=""
+			<enhanced:img
+				src={imgUrl}
+				alt="A smiling worker wearing a safety vest and construction helmet."
 				class="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
 				loading="eager"
 			/>

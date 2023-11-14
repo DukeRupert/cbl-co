@@ -53,26 +53,6 @@
 					</p>
 				</div>
 				<dl class="mt-10 space-y-4 text-base leading-7 text-gray-600 dark:text-gray-300">
-					<!-- <div class="flex gap-x-4">
-						<dt class="flex-none">
-							<span class="sr-only">Address</span>
-							<svg
-								class="h-7 w-6 text-gray-600 dark:text-gray-400"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke-width="1.5"
-								stroke="currentColor"
-								aria-hidden="true"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z"
-								/>
-							</svg>
-						</dt>
-						<dd>652 Jena Loop<br />Helena, MT 59602</dd>
-					</div> -->
 					<div class="flex gap-x-4">
 						<dt class="flex-none">
 							<span class="sr-only">Telephone</span>
@@ -92,7 +72,7 @@
 							</svg>
 						</dt>
 						<dd>
-							<a class="hover:text-white dark:hover:text-gray-900" href="tel:+1 (555) 234-5678"
+							<a class="hover:text-white dark:hover:text-gray-900" href="tel:+1(661)816-4291"
 								>+1 (661) 816-4291</a
 							>
 						</dd>
@@ -116,7 +96,7 @@
 							</svg>
 						</dt>
 						<dd>
-							<a class="hover:text-white dark:hover:text-gray-900" href="mailto:hello@example.com"
+							<a class="hover:text-white dark:hover:text-gray-900" href="mailto:tom@cblining.com"
 								>tom@cblining.com</a
 							>
 						</dd>

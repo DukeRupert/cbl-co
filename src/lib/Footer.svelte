@@ -4,7 +4,10 @@
 	export let twitter = '';
 	export let github = '';
 	export let youtube = '';
-	export let bus_name = "Christian Brother's Lining Co.";
+	export let bus_name = 'My Business Name';
+	import logoLight from '$lib/assets/cbl-header-light.png?enhanced';
+	import logoDark from '$lib/assets/cbl-header-dark.png?enhanced';
+	import { modeCurrent } from '@skeletonlabs/skeleton';
 </script>
 
 <footer class="bg-white dark:bg-gray-900" aria-labelledby="footer-heading">
@@ -12,11 +15,19 @@
 	<div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
 		<div class="xl:grid xl:grid-cols-3 xl:gap-8">
 			<div class="space-y-8">
-				<img
-					class="h-12"
-					src="https://n5qf30.p3cdn1.secureserver.net/wp-content/uploads/2017/03/cropped-cbl-header.png"
-					alt="christian brother's lining company logo"
-				/>
+				{#if $modeCurrent}
+					<enhanced:img
+						class="h-12 w-auto"
+						src={logoLight}
+						alt="christian brother's lining company logo"
+					/>
+				{:else}
+					<enhanced:img
+						class="h-12 w-auto"
+						src={logoDark}
+						alt="christian brother's lining company logo"
+					/>
+				{/if}
 				<p class="text-sm leading-6 text-gray-600 dark:text-gray-400">
 					Dedicated to rehabilitating aging pipelines for municipalities and cities since 2007.
 				</p>

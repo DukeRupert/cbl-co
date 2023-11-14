@@ -1,10 +1,8 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import PageHeader from '$lib/components/PageHeader.svelte';
-	import bad_pipe from '$lib/assets/bad_pipe.jpg?as=run';
-	import going_in from '$lib/assets/48_inch_going_in.jpg?as=run';
-	import cured from '$lib/assets/liner_in_mh.jpg?as=run';
-	import Img from '@zerodevx/svelte-img';
+	import badPipUrl from '$lib/assets/bad_pipe.jpg?enhanced';
+	import goingInUrl from '$lib/assets/48_inch_going_in.jpg?enhanced';
+	import curedUrl from '$lib/assets/liner_in_mh.jpg?enhanced';
 	import Cta from '$lib/components/Cta.svelte';
 
 	const title = 'What is CIPP?';
@@ -15,12 +13,10 @@
 		title: 'Cured-In-Place-Pipe Lining',
 		body: body
 	};
-
-	console.log($page);
 </script>
 
 <svelte:head>
-	<title>Christian Brother's Lining Co. | {title}</title>
+	<title>{title} | Christian Brother's Lining Co.</title>
 	<meta name="description" content={body} />
 </svelte:head>
 
@@ -47,8 +43,8 @@
 					</div>
 					<div class="flex-auto lg:col-span-7 xl:col-span-8">
 						<div class="aspect-square overflow-hidden rounded-lg bg-gray-100">
-							<Img
-								src={bad_pipe}
+							<enhanced:img
+								src={badPipUrl}
 								alt="Printed photo of bag being tossed into the sky on top of grass."
 								class="object-cover object-center"
 							/>
@@ -56,7 +52,7 @@
 					</div>
 				</div>
 				<div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
-					<div class="mt-6 lg:col-span-5 lg:mt-0 xl:col-span-4">
+					<div class="mt-6 lg:col-span-5 lg:mt-0 xl:col-span-4 lg:order-last">
 						<h3 class="text-lg font-medium text-gray-900 dark:text-gray-100">
 							Placing the CIPP Liner
 						</h3>
@@ -78,8 +74,8 @@
 					</div>
 					<div class="flex-auto lg:col-span-7 xl:col-span-8">
 						<div class="aspect-square overflow-hidden rounded-lg bg-gray-100">
-							<Img
-								src={going_in}
+							<enhanced:img
+								src={goingInUrl}
 								alt="Printed photo of bag being tossed into the sky on top of grass."
 								class="object-cover object-center"
 							/>
@@ -105,8 +101,8 @@
 					</div>
 					<div class="flex-auto lg:col-span-7 xl:col-span-8">
 						<div class="aspect-square overflow-hidden rounded-lg bg-gray-100">
-							<Img
-								src={cured}
+							<enhanced:img
+								src={curedUrl}
 								alt="Printed photo of bag being tossed into the sky on top of grass."
 								class="object-cover object-center"
 							/>

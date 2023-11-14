@@ -1,10 +1,11 @@
 <script lang="ts">
-	import { quadOut, quadIn } from 'svelte/easing';
+	import { quadOut } from 'svelte/easing';
 	import { fly, fade } from 'svelte/transition';
 	import type { FadeParams, FlyParams } from 'svelte/transition';
 	import { LightSwitch } from '@skeletonlabs/skeleton';
-	import { modeOsPrefers, modeUserPrefers, modeCurrent } from '@skeletonlabs/skeleton';
-	import Logo from './components/Logo.svelte';
+	import { modeCurrent } from '@skeletonlabs/skeleton';
+	import logoLight from '$lib/assets/cbl-header-light.png?enhanced';
+	import logoDark from '$lib/assets/cbl-header-dark.png?enhanced';
 
 	export let is_open = false;
 
@@ -38,11 +39,19 @@
 	<div class="flex items-center gap-x-12">
 		<a href="/" class="-m-1.5 p-1.5">
 			<span class="sr-only">Grit & Grace Bakery</span>
-			<img
-				class="h-16 w-auto"
-				src="https://n5qf30.p3cdn1.secureserver.net/wp-content/uploads/2017/03/cropped-cbl-header.png"
-				alt="christian brother's lining company logo"
-			/>
+			{#if $modeCurrent}
+				<enhanced:img
+					class="h-16 w-auto"
+					src={logoLight}
+					alt="christian brother's lining company logo"
+				/>
+			{:else}
+				<enhanced:img
+					class="h-16 w-auto"
+					src={logoDark}
+					alt="christian brother's lining company logo"
+				/>
+			{/if}
 		</a>
 		<div class="hidden lg:flex lg:gap-x-12">
 			{#each links as { label, href }, i}

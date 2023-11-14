@@ -8,8 +8,7 @@
 	import Features from '$lib/components/Features.svelte';
 	import LogoCloud from '$lib/components/LogoCloud.svelte';
 	import Seo from '$lib/components/Seo.svelte';
-	import Img from '@zerodevx/svelte-img';
-	import CleanPipe from '$lib/assets/AdobeStock_640644502.jpeg?as=run';
+	import imgUrl from '$lib/assets/AdobeStock_640644502.jpeg?enhanced';
 
 	const title = 'Reviving Your Pipes';
 	const body =
@@ -81,29 +80,27 @@
 	];
 
 	const seoData = {
-		title: `${BUSINESS_NAME} | ${title}`,
+		title: BUSINESS_NAME,
 		description: body,
 		url: ROOT_URL,
 		og: {
-			src: 'https://www.ebonyandivory.love/images/voice.jpeg',
-			alt: 'A hand holding a classic microphone',
+			src: `${$page.url.origin}/logo/cbl-header-light.png`,
+			alt: `${BUSINESS_NAME} logo`,
 			mimeType: 'jpeg',
-			width: 1757,
-			height: 2635
+			width: 860,
+			height: 330
 		}
 	};
-
-	console.log($page);
 </script>
 
-<!-- <Seo data={seoData} /> -->
+<Seo data={seoData} />
 <main class="isolate bg-white dark:bg-gray-950">
 	<Hero {title} {body} />
 	<Services {services} />
 	<OurMission />
 	<!-- Image section -->
 	<div class="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
-		<Img src={CleanPipe} alt="" class="aspect-[5/2] w-full object-cover xl:rounded-3xl" />
+		<enhanced:img src={imgUrl} alt="" class="aspect-[5/2] w-full object-cover xl:rounded-3xl" />
 	</div>
 	<Features features={advantages} />
 	<LogoCloud logos={clients} />
