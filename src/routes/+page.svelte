@@ -103,16 +103,8 @@
 	};
 
 	const seo = {
-		title: SITE_DATA.name,
-		description: hero.body,
-		url: SITE_DATA.url,
-		og: {
-			src: `${$page.url.origin}/logo/cbl-header-light.png`,
-			alt: `${SITE_DATA.name} logo`,
-			mimeType: 'jpeg',
-			width: 860,
-			height: 330
-		}
+		title: "CIPP Pipe Repair California | Trenchless Solutions | Christian Brother's Lining",
+		description: "Specializing in CIPP (Cured-In-Place-Pipe) for California municipalities. Minimize disruption, restore infrastructure.",
 	};
 </script>
 

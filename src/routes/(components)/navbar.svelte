@@ -37,10 +37,8 @@
 					{/each}
 				</div>
 			</div>
-			<div class="flex">
+			<div class="flex gap-x-4 lg:hidden">
 				<Lightswitch />
-			</div>
-			<div class="flex lg:hidden">
 				<Collapsible.Trigger
 					><Button variant="outline" size="icon"><HamburgerMenu class="h-6 w-6" /></Button
 					></Collapsible.Trigger

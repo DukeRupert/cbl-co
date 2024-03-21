@@ -1,4 +1,5 @@
 <script lang="ts">
+	import SvelteSeo from 'svelte-seo';
 	import PageHeader from '$lib/components/page-header.svelte';
 	import badPipeUrl from '$lib/assets/bad_pipe.jpg?enhanced';
 	import goingInUrl from '$lib/assets/48_inch_going_in.jpg?enhanced';
@@ -13,12 +14,15 @@
 		title: 'Cured-In-Place-Pipe Lining',
 		body: body
 	};
+
+	const seo = {
+		title: 'What is CIPP? Trenchless Pipe Repair Explained',
+		description:
+			'Learn how CIPP (Cured-In-Place Pipe) technology fixes failing pipes without digging. Understand the process, benefits, and applications.'
+	};
 </script>
 
-<svelte:head>
-	<title>{title} | Christian Brother's Lining Co.</title>
-	<meta name="description" content={body} />
-</svelte:head>
+<SvelteSeo {...seo} />
 
 <PageHeader {...page_header}>
 	<div class="mx-auto max-w-7xl py-24 sm:px-2 sm:py-32 lg:px-4">
@@ -27,15 +31,13 @@
 				<div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
 					<div class="mt-6 lg:col-span-5 lg:mt-0 xl:col-span-4">
 						<h3 class="text-lg font-medium">Identifying a failing pipe</h3>
-						<p class="mt-2 text-sm text-muted-foreground">
-							The Cured-In-Place Pipe (CIPP) installation process begins with identifying the ideal
-							target, which typically involves a failing city pipe. These failing pipes may be made
-							of various materials such as clay, concrete, or PVC and could suffer from issues like
-							cracks, corrosion, leaks, or structural damage. Engineers and technicians assess the
-							extent of the damage using advanced inspection methods, such as CCTV cameras, to
-							determine whether CIPP is a suitable solution. This step involves understanding the
-							pipe's size, location, and the specific problems it's facing, which will inform the
-							subsequent CIPP installation process.
+						<p class="mt-2 text-muted-foreground">
+							The Cured-In-Place Pipe (CIPP) process begins by identifying a failing city pipe. This
+							pipe may be made of clay, concrete, or PVC, and suffer from cracks, corrosion, leaks,
+							or structural damage. Engineers and technicians use advanced inspection methods, like
+							CCTV cameras, to assess the damage and determine if CIPP is a suitable repair
+							solution. This assessment includes understanding the pipe's size, location, and
+							specific problems to guide the CIPP installation process.
 						</p>
 					</div>
 					<div class="flex-auto lg:col-span-7 xl:col-span-8">
@@ -48,24 +50,32 @@
 						</div>
 					</div>
 				</div>
-				<div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
+				<div
+					class="flex flex-col-reverse prose dark:invert-prose lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8"
+				>
 					<div class="mt-6 lg:col-span-5 lg:mt-0 xl:col-span-4 lg:order-last">
 						<h3 class="text-lg font-medium">Placing the CIPP Liner</h3>
-						<p class="mt-2 text-sm text-muted-foreground">
-							Once the target pipe is identified and assessed, the CIPP liner installation process
-							begins. In this step: a. Preparation: The damaged pipe is thoroughly cleaned and
-							cleared of debris and obstructions. This ensures a smooth surface for the CIPP liner
-							to adhere to. b. Liner Fabrication: A flexible, resin-impregnated liner is
-							custom-fabricated based on the pipe's dimensions and the specific requirements of the
-							project. This liner typically consists of materials like polyester or fiberglass. c.
-							Installation: The liner is inserted into the damaged pipe through existing access
-							points, such as manholes or cleanouts. To guide the liner into place, inversion
-							methods or winching systems may be used, depending on the pipe's configuration. Once
-							positioned correctly, the liner is inflated, pressing against the interior walls of
-							the old pipe. d. Resin Cure: Heat or UV light is applied to initiate the curing
-							process of the resin-impregnated liner. This causes the liner to harden and form a
-							structurally sound, seamless pipe within the old one.
+						<p class="mt-2 text-muted-foreground">
+							Once the target pipe is identified and assessed, the CIPP liner installation begins:
 						</p>
+						<ul class="text-muted-foreground">
+							<li>
+								- Preparation: The damaged pipe is thoroughly cleaned to ensure a smooth surface for
+								liner adhesion.
+							</li>
+							<li>
+								- Liner Fabrication: A custom resin-impregnated liner (typically polyester or
+								fiberglass) is fabricated to match the pipe's dimensions.
+							</li>
+							<li>
+								- Installation: The liner is inserted into the damaged pipe via existing access
+								points and positioned using inversion or winching methods.
+							</li>
+							<li>
+								- Resin Cure: Heat or UV light cures the resin, hardening the liner to create a
+								seamless, structurally sound pipe within the old one.
+							</li>
+						</ul>
 					</div>
 					<div class="flex-auto lg:col-span-7 xl:col-span-8">
 						<div class="aspect-square overflow-hidden rounded-lg bg-gray-100">
@@ -80,18 +90,13 @@
 				<div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
 					<div class="mt-6 lg:col-span-5 lg:mt-0 xl:col-span-4">
 						<h3 class="text-lg font-medium">Curing the Liner</h3>
-						<p class="mt-2 text-sm text-muted-foreground">
-							The final step involves the curing of the liner, ensuring it's fully hardened and
-							functional: a. Temperature and Time Control: The curing process may vary depending on
-							the type of resin used, but it generally involves maintaining a specific temperature
-							for a predetermined period. This can be achieved through hot water, steam, or UV
-							light, depending on the liner material. b. Quality Control: During the curing process,
-							quality control measures are taken to ensure the liner adheres properly to the old
-							pipe's interior surface and forms a durable, leak-resistant pipe within. c. Final
-							Inspection: Once the curing process is complete, a final inspection is conducted to
-							confirm the integrity of the new CIPP and its suitability for use. This often includes
-							pressure testing to verify that the rehabilitated pipe can withstand normal operating
-							conditions.
+						<p class="mt-2 text-muted-foreground">
+							The final step in the process is curing the liner to ensure it hardens and becomes
+							fully functional. This involves controlling temperature and curing time with hot
+							water, steam, or UV light, depending on the resin type. During curing, quality control
+							inspections guarantee the liner properly adheres to the existing pipe, creating a
+							durable and leak-resistant interior. Once cured, the newly installed CIPP undergoes a
+							final inspection and pressure test to confirm its integrity and readiness for use.
 						</p>
 					</div>
 					<div class="flex-auto lg:col-span-7 xl:col-span-8">
@@ -109,3 +114,15 @@
 	</div>
 	<Cta />
 </PageHeader>
+
+<style>
+	ul {
+		list-style-type: none; /*Removes bullet points*/
+		padding: 0;
+		margin: 1em 0; /* Top and bottom margin */
+	}
+
+	li {
+		margin-bottom: 0.5em; /* Spacing between list items */
+	}
+</style>
