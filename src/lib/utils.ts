@@ -1,41 +1,62 @@
-import { drawerStore } from '@skeletonlabs/skeleton';
-import type { DrawerSettings } from '@skeletonlabs/skeleton';
-import type { ToastSettings } from '@skeletonlabs/skeleton';
-import { toastStore } from '@skeletonlabs/skeleton';
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+import { cubicOut } from "svelte/easing";
+import type { TransitionConfig } from "svelte/transition";
 
-// Drawer
-interface Id {
-	id: string;
+export function cn(...inputs: ClassValue[]) {
+    return twMerge(clsx(inputs));
 }
 
-export function drawerOpen(id: Id): void {
-	const settings: DrawerSettings = id || { id: 'navigation' };
-	drawerStore.open(settings);
-}
-
-export function drawerClose(): void {
-	drawerStore.close();
-}
-
-// Toast
-// const tSuccess: ToastSettings = {
-// 	message: 'Message sent!',
-// 	background: 'variant-filled-success'
-// };
-
-export const trigger_success_toast = (message: string) => {
-	const tSuccess: ToastSettings = {
-		message: message ?? 'Message sent!',
-		background: 'variant-filled-success'
-	};
-	toastStore.trigger(tSuccess);
+type FlyAndScaleParams = {
+    y?: number;
+    x?: number;
+    start?: number;
+    duration?: number;
 };
 
-const tError: ToastSettings = {
-	message: 'An error has occured. Please try again later.',
-	background: 'variant-filled-error'
-};
+export const flyAndScale = (
+    node: Element,
+    params: FlyAndScaleParams = { y: -8, x: 0, start: 0.95, duration: 150 }
+): TransitionConfig => {
+    const style = getComputedStyle(node);
+    const transform = style.transform === "none" ? "" : style.transform;
 
-export const trigger_error_toast = () => {
-	toastStore.trigger(tError);
+    const scaleConversion = (
+        valueA: number,
+        scaleA: [number, number],
+        scaleB: [number, number]
+    ) => {
+        const [minA, maxA] = scaleA;
+        const [minB, maxB] = scaleB;
+
+        const percentage = (valueA - minA) / (maxA - minA);
+        const valueB = percentage * (maxB - minB) + minB;
+
+        return valueB;
+    };
+
+    const styleToString = (
+        style: Record<string, number | string | undefined>
+    ): string => {
+        return Object.keys(style).reduce((str, key) => {
+            if (style[key] === undefined) return str;
+            return str + `${key}:${style[key]};`;
+        }, "");
+    };
+
+    return {
+        duration: params.duration ?? 200,
+        delay: 0,
+        css: (t) => {
+            const y = scaleConversion(t, [0, 1], [params.y ?? 5, 0]);
+            const x = scaleConversion(t, [0, 1], [params.x ?? 0, 0]);
+            const scale = scaleConversion(t, [0, 1], [params.start ?? 0.95, 1]);
+
+            return styleToString({
+                transform: `${transform} translate3d(${x}px, ${y}px, 0) scale(${scale})`,
+                opacity: t
+            });
+        },
+        easing: cubicOut
+    };
 };

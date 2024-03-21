@@ -1,9 +1,9 @@
 <script lang="ts">
-	import PageHeader from '$lib/components/PageHeader.svelte';
-	import badPipUrl from '$lib/assets/bad_pipe.jpg?enhanced';
+	import PageHeader from '$lib/components/page-header.svelte';
+	import badPipeUrl from '$lib/assets/bad_pipe.jpg?enhanced';
 	import goingInUrl from '$lib/assets/48_inch_going_in.jpg?enhanced';
 	import curedUrl from '$lib/assets/liner_in_mh.jpg?enhanced';
-	import Cta from '$lib/components/Cta.svelte';
+	import Cta from '$lib/components/cta.svelte';
 
 	const title = 'What is CIPP?';
 	const body =
@@ -20,17 +20,14 @@
 	<meta name="description" content={body} />
 </svelte:head>
 
-<PageHeader {...page_header} />
-<div class="bg-white dark:bg-gray-950">
+<PageHeader {...page_header}>
 	<div class="mx-auto max-w-7xl py-24 sm:px-2 sm:py-32 lg:px-4">
 		<div class="mx-auto max-w-2xl px-4 lg:max-w-none">
 			<div class="space-y-16">
 				<div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
 					<div class="mt-6 lg:col-span-5 lg:mt-0 xl:col-span-4">
-						<h3 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-							Identifying a failing pipe
-						</h3>
-						<p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+						<h3 class="text-lg font-medium">Identifying a failing pipe</h3>
+						<p class="mt-2 text-sm text-muted-foreground">
 							The Cured-In-Place Pipe (CIPP) installation process begins with identifying the ideal
 							target, which typically involves a failing city pipe. These failing pipes may be made
 							of various materials such as clay, concrete, or PVC and could suffer from issues like
@@ -42,10 +39,10 @@
 						</p>
 					</div>
 					<div class="flex-auto lg:col-span-7 xl:col-span-8">
-						<div class="aspect-square overflow-hidden rounded-lg bg-gray-100">
+						<div class="aspect-square overflow-hidden rounded-lg">
 							<enhanced:img
-								src={badPipUrl}
-								alt="Printed photo of bag being tossed into the sky on top of grass."
+								src={badPipeUrl}
+								alt="The inside of a degrading infrastructure pipe."
 								class="object-cover object-center"
 							/>
 						</div>
@@ -53,10 +50,8 @@
 				</div>
 				<div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
 					<div class="mt-6 lg:col-span-5 lg:mt-0 xl:col-span-4 lg:order-last">
-						<h3 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-							Placing the CIPP Liner
-						</h3>
-						<p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+						<h3 class="text-lg font-medium">Placing the CIPP Liner</h3>
+						<p class="mt-2 text-sm text-muted-foreground">
 							Once the target pipe is identified and assessed, the CIPP liner installation process
 							begins. In this step: a. Preparation: The damaged pipe is thoroughly cleaned and
 							cleared of debris and obstructions. This ensures a smooth surface for the CIPP liner
@@ -76,7 +71,7 @@
 						<div class="aspect-square overflow-hidden rounded-lg bg-gray-100">
 							<enhanced:img
 								src={goingInUrl}
-								alt="Printed photo of bag being tossed into the sky on top of grass."
+								alt="Christian Brother's Lining Company employees preparing the Cured-In-Place-Pipe lining"
 								class="object-cover object-center"
 							/>
 						</div>
@@ -84,8 +79,8 @@
 				</div>
 				<div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
 					<div class="mt-6 lg:col-span-5 lg:mt-0 xl:col-span-4">
-						<h3 class="text-lg font-medium text-gray-900 dark:text-gray-100">Curing the Liner</h3>
-						<p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+						<h3 class="text-lg font-medium">Curing the Liner</h3>
+						<p class="mt-2 text-sm text-muted-foreground">
 							The final step involves the curing of the liner, ensuring it's fully hardened and
 							functional: a. Temperature and Time Control: The curing process may vary depending on
 							the type of resin used, but it generally involves maintaining a specific temperature
@@ -100,10 +95,10 @@
 						</p>
 					</div>
 					<div class="flex-auto lg:col-span-7 xl:col-span-8">
-						<div class="aspect-square overflow-hidden rounded-lg bg-gray-100">
+						<div class="aspect-square overflow-hidden rounded-lg">
 							<enhanced:img
 								src={curedUrl}
-								alt="Printed photo of bag being tossed into the sky on top of grass."
+								alt="A newly renovated pipe after the Cured-In-Place-Pipe has been installed and cured"
 								class="object-cover object-center"
 							/>
 						</div>
@@ -113,4 +108,4 @@
 		</div>
 	</div>
 	<Cta />
-</div>
+</PageHeader>

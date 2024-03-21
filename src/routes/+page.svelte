@@ -1,72 +1,19 @@
 <script lang="ts">
+	import { SITE_DATA } from '$lib/global';
 	import { page } from '$app/stores';
-	import { BUSINESS_NAME, ROOT_URL } from '$lib/stores/company';
-	import Hero from '$lib/components/Hero.svelte';
-	import Services from '$lib/components/Services.svelte';
-	import OurMission from '$lib/components/OurMission.svelte';
-	import Cta from '$lib/components/Cta.svelte';
-	import Features from '$lib/components/Features.svelte';
-	import LogoCloud from '$lib/components/LogoCloud.svelte';
-	import Seo from '$lib/components/Seo.svelte';
+	import SvelteSeo from 'svelte-seo';
+	import Hero from './(components)/hero.svelte';
+	import Services from './(components)/services.svelte';
+	import Mission from './(components)/mission.svelte';
+	import Features from './(components)/features.svelte';
+	import LogoCloud from './(components)/logo-cloud.svelte';
+	import Cta from '$lib/components/cta.svelte';
 	import imgUrl from '$lib/assets/AdobeStock_640644502.jpeg?enhanced';
 
-	const title = 'Reviving Your Pipes';
-	const body =
-		"Christian Brother's Lining Co. is your go-to source for Cured-In-Place Piping (CIPP) services, dedicated to rehabilitating aging pipelines for municipalities and cities across the state since 2007. With our eco-friendly, cost-effective, and minimally disruptive approach, we're committed to ensuring California's underground infrastructure remains strong, reliable, and environmentally responsible.";
-
-	const services = [
-		{
-			title: 'Install CIPP',
-			body: 'Our expert team specializes in the installation of Cured-In-Place Piping (CIPP), offering a trenchless solution that rehabilitates pipelines with minimal disruption. This innovative technology extends the life of your pipes, creating a new, corrosion-resistant lining within the existing ones.'
-		},
-		{
-			title: 'Certified Installer for MTC Liner',
-			body: 'As a certified installer for <a href="https://www.aegion.com/mtc" class="text-tango-500 underline underline-offset-2" target="_blank" rel=noreferrer>MTC Liner</a>, we ensure the highest quality installation of this innovative lining material. The MTC Liner offers enhanced durability and corrosion resistance, extending the lifespan of your pipelines.'
-		},
-		{
-			title: 'CCTV Pipelines of All Sizes',
-			body: 'We provide comprehensive Closed-Circuit Television (CCTV) inspection services for pipelines of all sizes. Our state-of-the-art equipment and certified operators ensure thorough inspections, identifying issues and preventing potential problems.'
-		},
-		{
-			title: 'Operators are PACP/NASSCO Certified',
-			body: 'Our certified operators adhere to industry standards and best practices. With PACP (Pipeline Assessment and Certification Program) and NASSCO (National Association of Sewer Service Companies) certifications, you can trust in their expertise and professionalism.'
-		},
-		{
-			title: 'Hydro Jet and Remove Roots',
-			body: "Say goodbye to clogs and root intrusions with our high-pressure hydro jetting services. We'll efficiently remove blockages and roots, restoring the flow and integrity of your pipelines."
-		},
-		{
-			title: 'Mobile Steam Truck Rental',
-			body: "Our mobile steam truck rental service provides a versatile solution for various cleaning and maintenance needs. Whether it's cleaning, degreasing, or other steam-based tasks, our equipment is ready to meet your requirements on the go."
-		}
-	];
-
-	const advantages = [
-		{
-			title: 'Trenchless Technology',
-			body: 'CIPP eliminates the need for extensive excavation, reducing disruption to the environment and infrastructure.'
-		},
-		{
-			title: 'Cost-Effective',
-			body: 'CIPP is more cost-effective than traditional pipe replacement due to reduced labor and equipment requirements.'
-		},
-		{
-			title: 'Faster Repairs',
-			body: 'CIPP projects are typically completed more quickly, reducing service disruptions.'
-		},
-		{
-			title: 'Environmental Impact',
-			body: 'CIPP has a lower environmental impact, reducing the carbon footprint and waste generation.'
-		},
-		{
-			title: 'Less Disruption to Communities',
-			body: 'CIPP reduces disruption, allowing residents and businesses to continue their activities.'
-		},
-		{
-			title: 'Preservation of Landscapes and Infrastructure',
-			body: 'CIPP preserves landscapes and infrastructure during pipe rehabilitation.'
-		}
-	];
+	const hero = {
+		title: "Pipeline Problems? We've Got the Solution.",
+		body: 'Cured-In-Place Pipe (CIPP) lining for cost-effective, trenchless, and eco-friendly pipe rehabilitation. Serving California since 2007.'
+	};
 
 	const clients = [
 		'City of San Jose',
@@ -79,13 +26,89 @@
 		'Monterey'
 	];
 
-	const seoData = {
-		title: BUSINESS_NAME,
-		description: body,
-		url: ROOT_URL,
+	const features = {
+		eyebrow: 'The CIPP Advantage',
+		title: 'Why Municipalities Choose Us',
+		subtext:
+			'Discover the smarter, more efficient, and more sustainable way to fix aging pipelines.',
+		features: [
+			{
+				title: 'Minimize Disruption',
+				body: "Forget disruptive excavations. CIPP fixes pipes from the inside out, preserving roads, landscapes, and your community's flow."
+			},
+			{
+				title: 'Cost-Effective Repairs',
+				body: 'CIPP slashes labor and equipment costs compared to old-school pipe replacement. Get back to business faster with money to spare.'
+			},
+			{
+				title: 'The Eco-Friendly Fix',
+				body: 'CIPP means less waste, lower emissions, and a healthier environment. Choose the sustainable solution for pipeline repairs.'
+			},
+			{
+				title: 'Less Downtime for Communities',
+				body: 'CIPP projects get done faster, minimizing disruptions to traffic, businesses, and everyday life.'
+			},
+			{
+				title: 'Infrastructure Preservation',
+				body: 'CIPP extends the life of your pipelines without tearing up roads, sidewalks, and landscapes.'
+			}
+		]
+	};
+
+	const services = {
+		eyebrow: 'Our Services',
+		title: 'Your Partner in Infrastructure Renewal',
+		subtext:
+			"We provide cost-effective, efficient, and minimally disruptive solutions for municipal pipelines.  Discover how we keep your city's infrastructure flowing.",
+		services: [
+			{
+				title: 'Trenchless Pipe Repair',
+				body: 'Our CIPP experts seamlessly create a new, corrosion-resistant pipe inside your old one – extending its lifespan, saving you money, and minimizing community disruption.'
+			},
+			{
+				title: 'MTC Liner Experts',
+				body: "We're experts in MTC Liner, a superior solution for durable, corrosion-resistant pipe rehabilitation. Rest assured your pipelines are in the best hands."
+			},
+			{
+				title: 'Precision Pipeline Inspections',
+				body: 'We pinpoint pipeline problems with precision using advanced CCTV technology. Our detailed inspections guide accurate repairs, preventing costly surprises.'
+			},
+			{
+				title: 'Certified Technicians',
+				body: 'Our commitment to top standards is clear – our operators hold PACP/NASSCO certifications, ensuring your pipelines receive expert care.'
+			},
+			{
+				title: 'Powerful Hydro Jetting',
+				body: "Stubborn clogs and roots are no match for our hydro jetting. We'll clear blockages fast, restoring your pipelines to peak efficiency."
+			},
+			{
+				title: 'Mobile Steam Cleaning',
+				body: 'Tackle tough cleaning jobs anywhere with our versatile steam truck. Ideal for deep cleaning, degreasing, and more.'
+			}
+		]
+	};
+
+	const mission = {
+		title: "Our Mission: Restoring California's Lifelines, Sustainably",
+		subtext: [
+			"We're Christian Brother's Lining Co., your CIPP experts dedicated to keeping California's communities strong. We believe in smart, eco-conscious solutions that protect our environment and strengthen our infrastructure.",
+			'Our team of pipeline heroes uses cutting-edge CIPP technology to fix aging or damaged pipes from the inside out.  This means fewer disruptions, lower costs, and a healthier environment.',
+			"We're committed to being your partner in keeping California's underground infrastructure flowing. Let's work together to build a stronger, more sustainable future – one pipeline at a time."
+		],
+		impacts: [
+			{ value: '380,000+', impact: 'Linear Feet of Pipelines Restored' },
+			{ value: '400+', impact: 'Successful Projects' },
+			{ value: '0', impact: 'Sea Lions Displaced' }
+		]
+	};
+
+	const seo = {
+		title: SITE_DATA.name,
+		description: hero.body,
+		url: SITE_DATA.url,
 		og: {
 			src: `${$page.url.origin}/logo/cbl-header-light.png`,
-			alt: `${BUSINESS_NAME} logo`,
+			alt: `${SITE_DATA.name} logo`,
 			mimeType: 'jpeg',
 			width: 860,
 			height: 330
@@ -93,21 +116,20 @@
 	};
 </script>
 
-<Seo data={seoData} />
-<main class="isolate bg-white dark:bg-gray-950">
-	<Hero {title} {body} />
-	<Services {services} />
-	<OurMission />
-	<!-- Image section -->
-	<div class="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
-		<enhanced:img
-			src={imgUrl}
-			alt=""
-			class="aspect-[5/2] w-full object-cover xl:rounded-3xl"
-			sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
-		/>
-	</div>
-	<Features features={advantages} />
-	<LogoCloud logos={clients} />
-	<Cta />
-</main>
+<SvelteSeo {...seo} />
+
+<Hero {...hero} />
+<LogoCloud {clients} />
+<Features {...features} />
+<Services {...services} />
+<!-- Image section -->
+<div class="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
+	<enhanced:img
+		src={imgUrl}
+		alt=""
+		class="aspect-[5/2] w-full object-cover xl:rounded-3xl"
+		sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
+	/>
+</div>
+<Mission {...mission} />
+<Cta />
