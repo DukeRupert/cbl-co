@@ -58,20 +58,20 @@
 						<p class="mt-2 text-muted-foreground">
 							Once the target pipe is identified and assessed, the CIPP liner installation begins:
 						</p>
-						<ul class="text-muted-foreground">
-							<li>
+						<ul class="py-4 text-muted-foreground">
+							<li class="mb-2">
 								- Preparation: The damaged pipe is thoroughly cleaned to ensure a smooth surface for
 								liner adhesion.
 							</li>
-							<li>
+							<li class="mb-2">
 								- Liner Fabrication: A custom resin-impregnated liner (typically polyester or
 								fiberglass) is fabricated to match the pipe's dimensions.
 							</li>
-							<li>
+							<li class="mb-2">
 								- Installation: The liner is inserted into the damaged pipe via existing access
 								points and positioned using inversion or winching methods.
 							</li>
-							<li>
+							<li class="mb-2">
 								- Resin Cure: Heat or UV light cures the resin, hardening the liner to create a
 								seamless, structurally sound pipe within the old one.
 							</li>
@@ -122,17 +122,5 @@
 			</div>
 		</div>
 	</div>
-	<Cta />
 </PageHeader>
-
-<style>
-	ul {
-		list-style-type: none; /*Removes bullet points*/
-		padding: 0;
-		margin: 1em 0; /* Top and bottom margin */
-	}
-
-	li {
-		margin-bottom: 0.5em; /* Spacing between list items */
-	}
-</style>
+<Cta />
