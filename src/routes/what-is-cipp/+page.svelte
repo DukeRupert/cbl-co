@@ -1,18 +1,13 @@
 <script lang="ts">
+	import { CldImage } from 'svelte-cloudinary';
 	import SvelteSeo from 'svelte-seo';
 	import PageHeader from '$lib/components/page-header.svelte';
-	import badPipeUrl from '$lib/assets/bad_pipe.jpg?enhanced';
-	import goingInUrl from '$lib/assets/48_inch_going_in.jpg?enhanced';
-	import curedUrl from '$lib/assets/liner_in_mh.jpg?enhanced';
 	import Cta from '$lib/components/cta.svelte';
 
-	const title = 'What is CIPP?';
-	const body =
-		'This innovative technology extends the life of your pipes, creating a new, corrosion-resistant lining within the existing ones.';
 	const page_header = {
-		eyebrow: title,
+		eyebrow: 'What is CIPP?',
 		title: 'Cured-In-Place-Pipe Lining',
-		body: body
+		body: 'This innovative technology extends the life of your pipes, creating a new, corrosion-resistant lining within the existing ones.'
 	};
 
 	const seo = {
@@ -42,10 +37,15 @@
 					</div>
 					<div class="flex-auto lg:col-span-7 xl:col-span-8">
 						<div class="aspect-square overflow-hidden rounded-lg">
-							<enhanced:img
-								src={badPipeUrl}
+							<CldImage
+								src="https://res.cloudinary.com/rr-wholesale/image/upload/v1711110606/cbl-co/bad_pipe_psqhdn.jpg"
 								alt="The inside of a degrading infrastructure pipe."
 								class="object-cover object-center"
+								width="3024"
+								height="4032"
+								sizes={`(min-width: 1024px) 50vw,
+										(min-width: 640px) 90vw,
+										100vw`}
 							/>
 						</div>
 					</div>
@@ -78,11 +78,16 @@
 						</ul>
 					</div>
 					<div class="flex-auto lg:col-span-7 xl:col-span-8">
-						<div class="aspect-square overflow-hidden rounded-lg bg-gray-100">
-							<enhanced:img
-								src={goingInUrl}
+						<div class="aspect-square overflow-hidden rounded-lg">
+							<CldImage
+								src="https://res.cloudinary.com/rr-wholesale/image/upload/v1711110599/cbl-co/48_inch_going_in_w6xk4u.jpg"
 								alt="Christian Brother's Lining Company employees preparing the Cured-In-Place-Pipe lining"
 								class="object-cover object-center"
+								width="1512"
+								height="2016"
+								sizes={`(min-width: 1024px) 50vw,
+										(min-width: 640px) 90vw,
+										100vw`}
 							/>
 						</div>
 					</div>
@@ -101,10 +106,15 @@
 					</div>
 					<div class="flex-auto lg:col-span-7 xl:col-span-8">
 						<div class="aspect-square overflow-hidden rounded-lg">
-							<enhanced:img
-								src={curedUrl}
+							<CldImage
+								src="https://res.cloudinary.com/rr-wholesale/image/upload/v1711110611/cbl-co/liner_in_mh_o6r9aa.jpg"
 								alt="A newly renovated pipe after the Cured-In-Place-Pipe has been installed and cured"
 								class="object-cover object-center"
+								width="3024"
+								height="4032"
+								sizes={`(min-width: 1024px) 50vw,
+										(min-width: 640px) 90vw,
+										100vw`}
 							/>
 						</div>
 					</div>

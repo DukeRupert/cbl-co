@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { SITE_DATA } from '$lib/global';
-	import { page } from '$app/stores';
+	import { CldImage, type CldImageProps } from 'svelte-cloudinary';
 	import SvelteSeo from 'svelte-seo';
 	import Hero from './(components)/hero.svelte';
 	import Services from './(components)/services.svelte';
@@ -8,11 +7,19 @@
 	import Features from './(components)/features.svelte';
 	import LogoCloud from './(components)/logo-cloud.svelte';
 	import Cta from '$lib/components/cta.svelte';
-	import imgUrl from '$lib/assets/AdobeStock_640644502.jpeg?enhanced';
 
 	const hero = {
 		title: "Pipeline Problems? We've Got the Solution.",
-		body: 'Cured-In-Place Pipe (CIPP) lining for cost-effective, trenchless, and eco-friendly pipe rehabilitation. Serving California since 2007.'
+		body: 'Cured-In-Place Pipe (CIPP) lining for cost-effective, trenchless, and eco-friendly pipe rehabilitation. Serving California since 2007.',
+		image: {
+			src: 'https://res.cloudinary.com/rr-wholesale/image/upload/v1711110576/cbl-co/AdobeStock_529953734_Preview_pkzsc3.jpg',
+			alt: 'The view from inside an infrastructure pipe looking out on a construction site.',
+			width: '1000',
+			height: '667',
+			sizes: `(min-width: 1024px) 50vw, 
+				(min-width: 640px) 90vw,
+				100vw`,
+		}
 	};
 
 	const clients = [
@@ -102,9 +109,19 @@
 		]
 	};
 
+	const image: CldImageProps = {
+		src: 'https://res.cloudinary.com/rr-wholesale/image/upload/v1711110608/cbl-co/AdobeStock_640644502_hjitkv.jpg',
+		alt: 'Clean water flowing out of a restored pipe into a canal.',
+		width: '6144',
+		height: '3072',
+		sizes: `(min-width: 1024px) 70vw, 
+				100vw`,
+	};
+
 	const seo = {
 		title: "CIPP Pipe Repair California | Trenchless Solutions | Christian Brother's Lining",
-		description: "Specializing in CIPP (Cured-In-Place-Pipe) for California municipalities. Minimize disruption, restore infrastructure.",
+		description:
+			'Specializing in CIPP (Cured-In-Place-Pipe) for California municipalities. Minimize disruption, restore infrastructure.'
 	};
 </script>
 
@@ -116,11 +133,9 @@
 <Services {...services} />
 <!-- Image section -->
 <div class="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
-	<enhanced:img
-		src={imgUrl}
-		alt=""
+	<CldImage
+		{...image}
 		class="aspect-[5/2] w-full object-cover xl:rounded-3xl"
-		sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
 	/>
 </div>
 <Mission {...mission} />

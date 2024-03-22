@@ -1,15 +1,20 @@
 <script lang="ts">
 	import { SITE_DATA } from '$lib/global';
+	import { CldImage, type CldImageProps } from 'svelte-cloudinary';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import PaperPlane from 'svelte-radix/PaperPlane.svelte';
+
 	export let title = 'Title';
 	export let body = 'Body';
-	import imgUrl from '$lib/assets/AdobeStock_632539423.jpeg?enhanced';
+	export let image: CldImageProps;
 </script>
 
 <!-- Hero section -->
 <div class="relative isolate overflow-hidden pt-14">
-	<div class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-background shadow-xl shadow-accent ring-1 ring-accent-50 sm:-mr-80 lg:-mr-96" aria-hidden="true"></div>
+	<div
+		class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-background shadow-xl shadow-accent ring-1 ring-accent-50 sm:-mr-80 lg:-mr-96"
+		aria-hidden="true"
+	/>
 	<div class="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
 		<div
 			class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6"
@@ -29,11 +34,9 @@
 					>
 				</div>
 			</div>
-			<enhanced:img
-				src={imgUrl}
-				alt="A smiling worker wearing a safety vest and construction helmet."
-				class="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
-				sizes="(min-width:1920px) 580px, (min-width:1080px) 480px, (min-width:768px) 400px"
+			<CldImage
+				{...image}
+				class="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:mt-36"
 				loading="eager"
 			/>
 		</div>

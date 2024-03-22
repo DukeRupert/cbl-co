@@ -1,14 +1,13 @@
 <script lang="ts">
-	import { SITE_DATA, type Route } from '../../lib/global';
+	import { SITE_DATA } from '../../lib/global';
 	import { navigating } from '$app/stores';
 	import { mode } from 'mode-watcher';
+	import { CldImage } from 'svelte-cloudinary';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import * as Collapsible from '$lib/components/ui/collapsible';
 	import * as Card from '$lib/components/ui/card';
 	import HamburgerMenu from 'svelte-radix/HamburgerMenu.svelte';
 	import Lightswitch from '../../lib/components/lightswitch.svelte';
-	import logoLight from '$lib/assets/cbl-header-light.png?enhanced';
-	import logoDark from '$lib/assets/cbl-header-dark.png?enhanced';
 
 	let nav_open = false;
 
@@ -19,20 +18,26 @@
 	<Collapsible.Root bind:open={nav_open}>
 		<nav class="flex items-center justify-between p-6 lg:px-8 gap-x-6" aria-label="Global">
 			<div class="flex items-center gap-x-12">
-				<a href="/" class="-m-1.5 p-1.5">
-					<span class="sr-only">{SITE_DATA.name}</span>
-					{#if $mode}
-						<enhanced:img class="h-16 w-auto" src={logoLight} alt={`${SITE_DATA.name} logo`} />
-					{:else}
-						<enhanced:img class="h-16 w-auto" src={logoDark} alt={`${SITE_DATA.name} logo`} />
-					{/if}
-				</a>
+				<div class="h-12">
+					<a href="/">
+						<span class="sr-only">{SITE_DATA.name}</span>
+						<CldImage
+							src={$mode === 'dark'
+								? 'https://res.cloudinary.com/rr-wholesale/image/upload/v1711110607/cbl-co/cbl-header-dark_yol2l1.png'
+								: 'https://res.cloudinary.com/rr-wholesale/image/upload/v1711110608/cbl-co/cbl-header-light_iemzck.png'}
+							alt={SITE_DATA.name + ' logo'}
+							class="h-full w-auto max-h-12 object-cover object-center"
+							width="860"
+							height="330"
+							sizes={`(min-width: 640px) 20vw,
+										50vw`}
+						/>
+					</a>
+				</div>
 				<div class="hidden lg:flex lg:gap-x-12">
 					{#each SITE_DATA.routes as { id, url }}
-						<Button
-							href={url}
-							variant="link"
-							class="text-sm font-semibold leading-6 capitalize">{id}</Button
+						<Button href={url} variant="link" class="text-sm font-semibold leading-6 capitalize"
+							>{id}</Button
 						>
 					{/each}
 				</div>
