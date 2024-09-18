@@ -26,7 +26,7 @@
 					/>
 				</div>
 				<p class="text-sm leading-6 text-gray-600 dark:text-gray-400">
-					Dedicated to rehabilitating aging pipelines for municipalities and cities since 2007.
+					Dedicated to rehabilitating aging pipelines for municipalities and businesses since 2007.
 				</p>
 			</div>
 			<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">

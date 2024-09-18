@@ -24,13 +24,13 @@ export const SITE_DATA: Site_Data = {
 	name: "Christian Brother's Lining Co.",
 	url: 'https://cblining.com/',
 	phone: {
-		pretty: '(661) 816-4291',
-		tel: '+16618164291',
+		pretty: '(661) 645-9724',
+		tel: '+1-661-645-9724',
 		intl: 1,
 		area: 661,
-		prefix: 816,
-		line: 4291
+		prefix: 645,
+		line: 9724
 	},
-	email: 'tom@cblining.com',
+	email: 'jared@cblining.com',
 	routes: [{ id: 'what is CIPP?', url: '/what-is-cipp' }]
 };
