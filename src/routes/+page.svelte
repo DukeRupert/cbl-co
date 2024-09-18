@@ -18,19 +18,19 @@
 			height: '667',
 			sizes: `(min-width: 1024px) 50vw, 
 				(min-width: 640px) 90vw,
-				100vw`,
+				100vw`
 		}
 	};
 
 	const clients = [
-		'City of San Jose',
-		'Mill Valley',
-		'Napa Sanitation',
-		'San Carlos',
-		'Millbrae',
-		'Burlingame',
-		'Morgan Hill',
-		'Monterey'
+		'San Jose',
+		'San Francisco',
+		'Oakland',
+		'Berkeley',
+		'Concord',
+		'San Mareo',
+		'Monterey',
+		'Napa'
 	];
 
 	const features = {
@@ -115,7 +115,7 @@
 		width: '6144',
 		height: '3072',
 		sizes: `(min-width: 1024px) 70vw, 
-				100vw`,
+				100vw`
 	};
 
 	const seo = {
@@ -133,10 +133,7 @@
 <Services {...services} />
 <!-- Image section -->
 <div class="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
-	<CldImage
-		{...image}
-		class="aspect-[5/2] w-full object-cover xl:rounded-3xl"
-	/>
+	<CldImage {...image} class="aspect-[5/2] w-full object-cover xl:rounded-3xl" />
 </div>
 <Mission {...mission} />
 <Cta />

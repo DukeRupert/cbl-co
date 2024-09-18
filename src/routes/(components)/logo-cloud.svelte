@@ -50,5 +50,8 @@
 				</div>
 			{/each}
 		</div>
+		<p class="mt-16 text-center text-sm font-semibold leading-8 text-gray-900 dark:text-gray-100">
+			We also serve the private sector!
+		</p>
 	</div>
 </div>
