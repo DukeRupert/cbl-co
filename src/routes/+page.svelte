@@ -92,16 +92,15 @@
 	};
 
 	const mission = {
-		title: "Our Mission: Restoring California's Lifelines, Sustainably",
+		title: "Our Mission: Glorifying God First & Restoring California's Lifelines",
 		subtext: [
-			"We're Christian Brother's Lining Co., your CIPP experts dedicated to keeping California's communities strong. We believe in smart, eco-conscious solutions that protect our environment and strengthen our infrastructure.",
-			'Our team of pipeline heroes uses cutting-edge CIPP technology to fix aging or damaged pipes from the inside out.  This means fewer disruptions, lower costs, and a healthier environment.',
+			"At Christian Brother's Lining Co, we are proud to be frontrunners in Cured-In-Place Piping (CIPP) and Manhole Rehabilitation services, offering a lifeline to municipalities and businesses across the Golden State. With a strong commitment to excellence and a passion for ensuring the longevity of California's vital underground infrastructure, we've dedicated ourselves to providing a cost-effective and sustainable alternative to traditional pipe replacement.",
+			'Our team of pipeline heroes uses cutting-edge CIPP technology to fix aging or damaged pipes from the inside out. This means fewer disruptions, lower costs, and a healthier environment.',
 			"We're committed to being your partner in keeping California's underground infrastructure flowing. Let's work together to build a stronger, more sustainable future – one pipeline at a time."
 		],
 		impacts: [
-			{ value: '380,000+', impact: 'Linear Feet of Pipelines Restored' },
-			{ value: '400+', impact: 'Successful Projects' },
-			{ value: '0', impact: 'Sea Lions Displaced' }
+			{ value: '250,000+', impact: 'Linear Feet of Pipelines Restored' },
+			{ value: '300+', impact: 'Successful Projects' }
 		]
 	};
 
