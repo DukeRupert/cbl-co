@@ -35,7 +35,7 @@
 
 	const features = {
 		eyebrow: 'The CIPP Advantage',
-		title: 'Why Municipalities Choose Us',
+		title: 'Why Choose Us?',
 		subtext:
 			'Discover the smarter, more efficient, and more sustainable way to fix aging pipelines.',
 		features: [
@@ -45,7 +45,7 @@
 			},
 			{
 				title: 'Cost-Effective Repairs',
-				body: 'CIPP slashes labor and equipment costs compared to old-school pipe replacement. Get back to business faster with money to spare.'
+				body: 'CIPP slashes labor and equipment costs compared to traditional open trench pipe. Get back to business faster with money to spare.'
 			},
 			{
 				title: 'The Eco-Friendly Fix',
