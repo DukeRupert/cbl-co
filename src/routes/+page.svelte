@@ -74,23 +74,19 @@
 			},
 			{
 				title: 'MTC Liner Experts',
-				body: "We're experts in MTC Liner, a superior solution for durable, corrosion-resistant pipe rehabilitation. Rest assured your pipelines are in the best hands."
+				body: "We're certified Manufactured Technologies Corporation (MTC) Liner installers, providing a superior solution for durable, corrosion-resistant pipe rehabilitation. Rest assured your pipelines are in the best hands."
 			},
 			{
-				title: 'Precision Pipeline Inspections',
-				body: 'We pinpoint pipeline problems with precision using advanced CCTV technology. Our detailed inspections guide accurate repairs, preventing costly surprises.'
-			},
-			{
-				title: 'Certified Technicians',
-				body: 'Our commitment to top standards is clear – our operators hold PACP/NASSCO certifications, ensuring your pipelines receive expert care.'
+				title: 'Manhole Rehabilitation',
+				body: "Don't wait for small issues to become big problems. We offer comprehensive solutions for repairing and upgrading manhole structures"
 			},
 			{
 				title: 'Powerful Hydro Jetting',
 				body: "Stubborn clogs and roots are no match for our hydro jetting. We'll clear blockages fast, restoring your pipelines to peak efficiency."
 			},
 			{
-				title: 'Manhole Rehabilitation',
-				body: "Don't wait for small issues to become big problems. We offer comprehensive solutions for repairing and upgrading manhole structures"
+				title: 'Certified Technicians',
+				body: 'Our commitment to top standards is clear – our operators hold PACP/NASSCO certifications, ensuring your pipelines receive expert care.'
 			}
 		]
 	};
