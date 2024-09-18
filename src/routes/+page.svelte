@@ -66,7 +66,7 @@
 		eyebrow: 'Our Services',
 		title: 'Your Partner in Infrastructure Renewal',
 		subtext:
-			"We provide cost-effective, efficient, and minimally disruptive solutions for municipal pipelines.  Discover how we keep your city's infrastructure flowing.",
+			'We keep your infrastructure flowing by providing cost-effective and efficient solutions for pipeline rehabilitation.',
 		services: [
 			{
 				title: 'Trenchless Pipe Repair',
@@ -89,8 +89,8 @@
 				body: "Stubborn clogs and roots are no match for our hydro jetting. We'll clear blockages fast, restoring your pipelines to peak efficiency."
 			},
 			{
-				title: 'Mobile Steam Cleaning',
-				body: 'Tackle tough cleaning jobs anywhere with our versatile steam truck. Ideal for deep cleaning, degreasing, and more.'
+				title: 'Manhole Rehabilitation',
+				body: "Don't wait for small issues to become big problems. We offer comprehensive solutions for repairing and upgrading manhole structures"
 			}
 		]
 	};
