@@ -101,15 +101,6 @@
                 <p class="text-xs leading-5 text-gray-600 dark:text-gray-400">
                     &copy; {date.getFullYear()} {SITE_DATA.name}. All rights reserved.
                 </p>
-                <!-- Optional: Add Privacy Policy/Terms links here -->
-                <div class="flex gap-4">
-                    <a href="/privacy-policy" class="text-xs text-gray-600 dark:text-gray-400 hover:text-green-600">
-                        Privacy Policy
-                    </a>
-                    <a href="/terms" class="text-xs text-gray-600 dark:text-gray-400 hover:text-green-600">
-                        Terms of Service
-                    </a>
-                </div>
             </div>
         </div>
     </div>
