@@ -4,7 +4,6 @@
 	import { Button } from '$lib/components/ui/button/index.js';
     import { Phone, Mail, Clock, Shield, Award } from 'lucide-svelte';
     
-    export let mode: 'dark' | 'light';
     const date = new Date();
 </script>
 
@@ -16,9 +15,7 @@
             <div class="space-y-8">
                 <div class="max-w-[200px]">
                     <CldImage
-                        src={mode === 'dark'
-                            ? 'https://res.cloudinary.com/rr-wholesale/image/upload/v1711110607/cbl-co/cbl-header-dark_yol2l1.png'
-                            : 'https://res.cloudinary.com/rr-wholesale/image/upload/v1711110608/cbl-co/cbl-header-light_iemzck.png'}
+                        src='https://res.cloudinary.com/rr-wholesale/image/upload/v1711110608/cbl-co/cbl-header-light_iemzck.png'
                         alt={SITE_DATA.name + ' logo'}
                         class="w-full object-contain"
                         width="860"

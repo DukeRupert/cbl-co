@@ -1,12 +1,9 @@
 <script lang="ts">
 	import { SITE_DATA } from '../../lib/global';
 	import { navigating } from '$app/state';
-	import { mode } from 'mode-watcher';
 	import { CldImage } from 'svelte-cloudinary';
 	import { Button } from '$lib/components/ui/button/index.js';
-
 	import { Menu, X } from 'lucide-svelte';
-	import Lightswitch from '$lib/components/lightswitch.svelte';
 
 	let isOpen = $state(false);
 	$effect(() => {
@@ -21,9 +18,7 @@
 					<a href="/">
 						<span class="sr-only">{SITE_DATA.name}</span>
 						<CldImage
-							src={$mode === 'dark'
-								? 'https://res.cloudinary.com/rr-wholesale/image/upload/v1711110607/cbl-co/cbl-header-dark_yol2l1.png'
-								: 'https://res.cloudinary.com/rr-wholesale/image/upload/v1711110608/cbl-co/cbl-header-light_iemzck.png'}
+							src='https://res.cloudinary.com/rr-wholesale/image/upload/v1711110608/cbl-co/cbl-header-light_iemzck.png'
 							alt={SITE_DATA.name + ' logo'}
 							class="h-full w-auto max-h-12 object-cover object-center"
 							width="860"
