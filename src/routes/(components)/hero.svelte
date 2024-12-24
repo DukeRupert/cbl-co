@@ -4,9 +4,13 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import PaperPlane from 'svelte-radix/PaperPlane.svelte';
 
-	export let title = 'Title';
-	export let body = 'Body';
-	export let image: CldImageProps;
+	interface Props {
+		title?: string;
+		body?: string;
+		image: CldImageProps;
+	}
+
+	let { title = 'Title', body = 'Body', image }: Props = $props();
 </script>
 
 <!-- Hero section -->
@@ -14,7 +18,7 @@
 	<div
 		class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-background shadow-xl shadow-accent ring-1 ring-accent-50 sm:-mr-80 lg:-mr-96"
 		aria-hidden="true"
-	/>
+	></div>
 	<div class="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
 		<div
 			class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6"
@@ -29,7 +33,7 @@
 						<PaperPlane class="mr-2 h-4 w-4" />
 						Call
 					</Button>
-					<Button variant="outline" href="/what-is-cipp"
+					<Button variant="outline" href="/services/cipp-pipe-lining"
 						>Learn more <span aria-hidden="true">→</span></Button
 					>
 				</div>
@@ -41,5 +45,5 @@
 			/>
 		</div>
 	</div>
-	<div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-background sm:h-32" />
+	<div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-background sm:h-32"></div>
 </div>

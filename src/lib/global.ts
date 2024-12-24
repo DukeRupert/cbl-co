@@ -32,5 +32,6 @@ export const SITE_DATA: Site_Data = {
 		line: 9724
 	},
 	email: 'jared@cblining.com',
-	routes: [{ id: 'what is CIPP?', url: '/what-is-cipp' }]
+	routes: [{ id: 'CIPP Pipe Lining', url: '/services/cipp-pipe-lining' },
+	{ id: 'Manhole Rehabilitation', url: '/services/manhole-rehabilitation' }]
 };

@@ -1,4 +1,4 @@
-<script lang="ts" context="module">
+<script lang="ts" module>
 	export interface Service {
 		title: string;
 		body: string;
@@ -6,10 +6,19 @@
 </script>
 
 <script lang="ts">
-	export let eyebrow: string;
-	export let title: string;
-	export let subtext: string;
-	export let services: Service[] = [];
+	interface Props {
+		eyebrow: string;
+		title: string;
+		subtext: string;
+		services?: Service[];
+	}
+
+	let {
+		eyebrow,
+		title,
+		subtext,
+		services = []
+	}: Props = $props();
 </script>
 
 <!-- Services -->

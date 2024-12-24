@@ -1,8 +1,17 @@
 <script lang="ts">
-	export let eyebrow = 'Get the help you need';
-	export let title = 'Support center';
-	export let body =
-		'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.';
+	interface Props {
+		eyebrow?: string;
+		title?: string;
+		body?: string;
+		children?: import('svelte').Snippet;
+	}
+
+	let {
+		eyebrow = 'Get the help you need',
+		title = 'Support center',
+		body = 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.',
+		children
+	}: Props = $props();
 </script>
 
 <div class="px-6 py-32 sm:py-32 lg:px-8">
@@ -15,5 +24,5 @@
 		</h2>
 		<p class="mt-6 text-lg leading-8 text-muted-foreground">{body}</p>
 	</div>
-	<slot />
+	{@render children?.()}
 </div>

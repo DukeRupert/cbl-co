@@ -1,5 +1,9 @@
 <script lang="ts">
-	export let clients: string[] = [];
+	interface Props {
+		clients?: string[];
+	}
+
+	let { clients = [] }: Props = $props();
 </script>
 
 <!-- Logo cloud -->

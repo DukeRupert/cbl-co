@@ -1,4 +1,4 @@
-<script lang="ts" context="module">
+<script lang="ts" module>
 	export interface Impact {
 		value: string;
 		impact: string;
@@ -6,9 +6,13 @@
 </script>
 
 <script lang="ts">
-	export let title: string;
-	export let subtext: string[];
-	export let impacts: Impact[];
+	interface Props {
+		title: string;
+		subtext: string[];
+		impacts: Impact[];
+	}
+
+	let { title, subtext, impacts }: Props = $props();
 </script>
 
 <!-- Content section -->

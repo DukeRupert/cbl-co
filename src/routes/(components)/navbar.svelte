@@ -1,24 +1,22 @@
 <script lang="ts">
 	import { SITE_DATA } from '../../lib/global';
-	import { navigating } from '$app/stores';
+	import { navigating } from '$app/state';
 	import { mode } from 'mode-watcher';
 	import { CldImage } from 'svelte-cloudinary';
 	import { Button } from '$lib/components/ui/button/index.js';
-	import * as Collapsible from '$lib/components/ui/collapsible';
-	import * as Card from '$lib/components/ui/card';
-	import HamburgerMenu from 'svelte-radix/HamburgerMenu.svelte';
-	import Lightswitch from '../../lib/components/lightswitch.svelte';
 
-	let nav_open = false;
+	import { Menu, X } from 'lucide-svelte';
 
-	$: if ($navigating) nav_open = false;
+	let isOpen = $state(false);
+	$effect(() => {
+		if (navigating.complete) isOpen = false;
+	})
 </script>
 
 <header class="absolute inset-x-0 top-0 z-50">
-	<Collapsible.Root bind:open={nav_open}>
 		<nav class="flex items-center justify-between p-6 lg:px-8 gap-x-6" aria-label="Global">
 			<div class="flex items-center gap-x-12">
-				<div class="h-12">
+				<div class="h-12 bg-white rounded-sm">
 					<a href="/">
 						<span class="sr-only">{SITE_DATA.name}</span>
 						<CldImage
@@ -43,22 +41,38 @@
 				</div>
 			</div>
 			<div class="flex gap-x-4 lg:hidden">
-				<Lightswitch />
-				<Collapsible.Trigger
-					><Button variant="outline" size="icon"><HamburgerMenu class="h-6 w-6" /></Button
-					></Collapsible.Trigger
-				>
+				<!-- Toggle Button -->
+				<button onclick={() => (isOpen = !isOpen)} class="p-2 text-gray-600 hover:text-gray-900">
+					{#if isOpen}
+						<X size={24} />
+					{:else}
+						<Menu size={24} />
+					{/if}
+				</button>
 			</div>
-			<Collapsible.Content class="absolute left-0 top-full w-full">
-				<Card.Root>
-					<Card.Header><h2>Navigation</h2></Card.Header>
-					<Card.Content>
-						{#each SITE_DATA.routes as { id, url }}
-							<Button href={url} variant="link" class="capitalize">{id}</Button>
+			<!-- Navigation Menu -->
+			<div
+				class="absolute top-full left-0 w-full bg-white shadow-lg rounded-b-lg
+				   transform transition-all duration-200 ease-in-out"
+				class:translate-y-0={isOpen}
+				class:-translate-y-2={!isOpen}
+				class:opacity-100={isOpen}
+				class:opacity-0={!isOpen}
+				class:pointer-events-none={!isOpen}
+			>
+				<div class="p-4">
+					<h2 class="text-lg font-semibold mb-4">Navigation</h2>
+					<nav class="space-y-2">
+						{#each SITE_DATA.routes as route}
+							<a
+								href={route.url}
+								class="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
+							>
+								{route.id}
+							</a>
 						{/each}
-					</Card.Content>
-				</Card.Root>
-			</Collapsible.Content>
+					</nav>
+				</div>
+			</div>
 		</nav>
-	</Collapsible.Root>
 </header>

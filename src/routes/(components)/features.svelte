@@ -1,4 +1,4 @@
-<script lang="ts" context="module">
+<script lang="ts" module>
 	export interface Feature {
 		title: string;
 		body: string;
@@ -6,10 +6,19 @@
 </script>
 
 <script lang="ts">
-	export let eyebrow: string;
-	export let title: string;
-	export let subtext: string;
-	export let features: Feature[] = [];
+	interface Props {
+		eyebrow: string;
+		title: string;
+		subtext: string;
+		features?: Feature[];
+	}
+
+	let {
+		eyebrow,
+		title,
+		subtext,
+		features = []
+	}: Props = $props();
 </script>
 
 <!-- Features section -->
