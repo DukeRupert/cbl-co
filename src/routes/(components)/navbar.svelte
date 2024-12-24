@@ -6,6 +6,7 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 
 	import { Menu, X } from 'lucide-svelte';
+	import Lightswitch from '$lib/components/lightswitch.svelte';
 
 	let isOpen = $state(false);
 	$effect(() => {
