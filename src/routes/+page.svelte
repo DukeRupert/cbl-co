@@ -10,13 +10,13 @@
 
 	const hero = {
 		title: "Pipeline Problems? We've Got the Solution.",
-		body: 'Cured-In-Place Pipe (CIPP) lining for cost-effective, trenchless, and eco-friendly pipe rehabilitation. Serving California since 2007.',
+		body: 'Cured-In-Place Pipe (CIPP) lining for cost-effective, trenchless, and eco-friendly pipe rehabilitation. Serving California since 2008.',
 		image: {
 			src: 'https://res.cloudinary.com/rr-wholesale/image/upload/v1711110576/cbl-co/AdobeStock_529953734_Preview_pkzsc3.jpg',
 			alt: 'The view from inside an infrastructure pipe looking out on a construction site.',
 			width: '1000',
 			height: '667',
-			sizes: `(min-width: 1024px) 50vw, 
+			sizes: `(min-width: 1024px) 50vw,
 				(min-width: 640px) 90vw,
 				100vw`
 		}
@@ -28,7 +28,7 @@
 		'Oakland',
 		'Berkeley',
 		'Concord',
-		'San Mareo',
+		'San Mateo',
 		'Monterey',
 		'Napa'
 	];
@@ -109,7 +109,7 @@
 		alt: 'Clean water flowing out of a restored pipe into a canal.',
 		width: '6144',
 		height: '3072',
-		sizes: `(min-width: 1024px) 70vw, 
+		sizes: `(min-width: 1024px) 70vw,
 				100vw`
 	};
 

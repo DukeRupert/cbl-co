@@ -31,7 +31,9 @@ export const SITE_DATA: Site_Data = {
 		prefix: 645,
 		line: 9724
 	},
-	email: 'jared@cblining.com',
-	routes: [{ id: 'CIPP Pipe Lining', url: '/services/cipp-pipe-lining' },
-	{ id: 'Manhole Rehabilitation', url: '/services/manhole-rehabilitation' }]
+	email: 'office@cblining.com',
+	routes: [
+		{ id: 'CIPP Pipe Lining', url: '/services/cipp-pipe-lining' },
+		{ id: 'Manhole Rehabilitation', url: '/services/manhole-rehabilitation' }
+	]
 };
