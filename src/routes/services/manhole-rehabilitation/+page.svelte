@@ -1,7 +1,14 @@
 <script lang="ts">
 	import Cta from '$lib/components/cta.svelte';
+	import SvelteSeo from 'svelte-seo';
 	import { ChevronRight, Shield, Clock, DollarSign, Activity, CheckCircle } from 'lucide-svelte';
-	import { onMount } from 'svelte';
+
+	// Add SEO metadata
+	const seo = {
+		title: 'Manhole Rehabilitation Services | Infrastructure Restoration Experts',
+		description:
+			'Professional manhole rehabilitation services to extend infrastructure lifespan, reduce costs, and minimize disruption. Complete restoration within 10-12 hours.'
+	};
 
 	let activeTab = $state('preparation');
 
@@ -44,6 +51,8 @@
 	];
 </script>
 
+<SvelteSeo {...seo} />
+
 <div class="min-h-screen bg-white">
 	<!-- Hero Section -->
 	<div class="relative bg-gray-900 text-white">
@@ -55,7 +64,11 @@
 					</h1>
 					<p class="mt-6 text-xl text-gray-300 max-w-2xl">
 						Professional restoration services that protect and extend the life of your
-						infrastructure while minimizing costs and disruption.
+						infrastructure while minimizing costs and disruption. Often paired with our <a
+							href="/services/cipp-pipe-lining"
+							class="text-orange-300 hover:text-orange-200 underline">CIPP pipe lining services</a
+						>
+						for complete system rehabilitation.
 					</p>
 					<div class="mt-8">
 						<a
@@ -139,6 +152,32 @@
 					{/if}
 				{/each}
 			</div>
+		</div>
+	</div>
+
+	<!-- Related Services Section for Manhole Rehabilitation page -->
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gray-50">
+		<div class="text-center mb-8">
+			<h2 class="text-2xl font-bold tracking-tight text-gray-900">Related Services</h2>
+			<p class="mt-2 text-lg text-gray-600">
+				Complete your infrastructure maintenance with our other specialized services
+			</p>
+		</div>
+
+		<div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
+			<h3 class="text-xl font-semibold mb-2">CIPP Pipe Lining</h3>
+			<p class="text-gray-600 mb-4">
+				Pair your manhole rehabilitation with our trenchless pipe repair services. Our CIPP
+				technology creates a new pipe within your existing infrastructure without disruptive
+				excavation.
+			</p>
+			<a
+				href="/services/cipp-pipe-lining"
+				class="text-orange-500 hover:text-orange-700 font-medium flex items-center"
+			>
+				Learn more about our CIPP pipe lining services
+				<ChevronRight class="ml-1 w-4 h-4" />
+			</a>
 		</div>
 	</div>
 

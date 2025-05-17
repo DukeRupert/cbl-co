@@ -13,12 +13,7 @@
 		services?: Service[];
 	}
 
-	let {
-		eyebrow,
-		title,
-		subtext,
-		services = []
-	}: Props = $props();
+	let { eyebrow, title, subtext, services = [] }: Props = $props();
 </script>
 
 <!-- Services -->
@@ -52,7 +47,7 @@
 							</svg>
 							{title}
 						</dt>
-						<dd class="mt-2 text-muted-foreground">{body}</dd>
+						<dd class="mt-2 text-muted-foreground">{@html body}</dd>
 					</div>
 				{/each}
 			</dl>

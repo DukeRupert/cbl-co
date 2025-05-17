@@ -7,12 +7,13 @@
 	import Features from './(components)/features.svelte';
 	import LogoCloud from './(components)/logo-cloud.svelte';
 	import Cta from '$lib/components/cta.svelte';
+	import { ChevronRight } from 'lucide-svelte';
 
 	const hero = {
 		title: "Pipeline Problems? We've Got the Solution.",
 		body: 'Cured-In-Place Pipe (CIPP) lining for cost-effective, trenchless, and eco-friendly pipe rehabilitation. Serving California since 2008.',
 		image: {
-			src: 'https://res.cloudinary.com/rr-wholesale/image/upload/v1711110576/cbl-co/AdobeStock_529953734_Preview_pkzsc3.jpg',
+			src: 'https://res.cloudinary.com/rr-wholesale/image/upload/v1747515588/cbl-co/repaired_pipe_an9eij.jpg',
 			alt: 'The view from inside an infrastructure pipe looking out on a construction site.',
 			width: '1000',
 			height: '667',
@@ -70,7 +71,7 @@
 		services: [
 			{
 				title: 'Trenchless Pipe Repair',
-				body: 'Our CIPP experts seamlessly create a new, corrosion-resistant pipe inside your old one – extending its lifespan, saving you money, and minimizing community disruption.'
+				body: 'Our <a href="/services/cipp-pipe-lining" class="text-orange-500 hover:text-orange-700 font-medium">CIPP experts</a> seamlessly create a new, corrosion-resistant pipe inside your old one – extending its lifespan, saving you money, and minimizing community disruption.'
 			},
 			{
 				title: 'MTC Liner Experts',
@@ -78,7 +79,7 @@
 			},
 			{
 				title: 'Manhole Rehabilitation',
-				body: "Don't wait for small issues to become big problems. We offer comprehensive solutions for repairing and upgrading manhole structures"
+				body: "Don't wait for small issues to become big problems. We offer comprehensive <a href='/services/manhole-rehabilitation' class='text-orange-500 hover:text-orange-700 font-medium'>manhole rehabilitation solutions</a> for repairing and upgrading manhole structures"
 			},
 			{
 				title: 'Powerful Hydro Jetting',
@@ -122,13 +123,59 @@
 
 <SvelteSeo {...seo} />
 
+<!-- Main Hero Section -->
 <Hero {...hero} />
-<LogoCloud {clients} />
-<Features {...features} />
-<Services {...services} />
-<!-- Image section -->
-<div class="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
-	<CldImage {...image} class="aspect-[5/2] w-full object-cover xl:rounded-3xl" />
+
+<!-- Trust Indicators Section -->
+<div class="py-10">
+	<LogoCloud {clients} />
 </div>
-<Mission {...mission} />
+
+<!-- Services Overview - Primary Value Proposition -->
+<div class="relative overflow-hidden py-12">
+	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+		<Services {...services} />
+
+		<!-- Strong CTA After Services -->
+		<div class="mt-12 text-center">
+			<a
+				href="/services/cipp-pipe-lining"
+				class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+			>
+				Explore Our CIPP Services
+				<ChevronRight class="ml-2 -mr-1 h-5 w-5" aria-hidden="true" />
+			</a>
+		</div>
+	</div>
+</div>
+
+<!-- Features Section - Why Choose Us -->
+<div class="bg-white">
+	<Features {...features} />
+
+	<!-- Secondary CTA -->
+	<div class="text-center mb-16">
+		<a
+			href="/services/manhole-rehabilitation"
+			class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-orange-700 bg-orange-100 hover:bg-orange-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+		>
+			Learn About Manhole Rehabilitation
+			<ChevronRight class="ml-2 -mr-1 h-5 w-5" aria-hidden="true" />
+		</a>
+	</div>
+</div>
+
+<!-- Visual Divider - Full Width Image -->
+<div class="bg-gray-800 py-2">
+	<div class="mt-12 sm:mt-16 xl:mx-auto xl:max-w-7xl xl:px-8">
+		<CldImage {...image} class="aspect-[5/2] w-full object-cover xl:rounded-3xl" />
+	</div>
+</div>
+
+<!-- Mission and Impact - About Us -->
+<div class="bg-white">
+	<Mission {...mission} />
+</div>
+
+<!-- Final Strong CTA -->
 <Cta />
