@@ -98,7 +98,7 @@
 						class="w-full justify-center bg-orange-600 hover:bg-orange-700 text-white transition-all shadow mb-4"
 					>
 						<Phone class="mr-2 h-5 w-5" />
-						Call {SITE_DATA.phone.pretty}
+						Call
 					</Button>
 
 					<!-- Secondary CTA Button -->

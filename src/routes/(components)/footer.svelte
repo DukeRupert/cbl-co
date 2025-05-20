@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { SITE_DATA } from '../../lib/global';
-	import { CldImage } from 'svelte-cloudinary';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { Phone, Mail, Clock, Shield, Award } from 'lucide-svelte';
 
@@ -14,8 +13,8 @@
 			<!-- Company Info Section -->
 			<div class="space-y-8">
 				<div class="max-w-[200px]">
-					<CldImage
-						src="https://res.cloudinary.com/rr-wholesale/image/upload/v1711110608/cbl-co/cbl-header-light_iemzck.png"
+					<img
+						src="https://res.cloudinary.com/rr-wholesale/image/upload/c_fill_pad,w_860,h_330,g_auto/f_auto/q_auto/v1711110608/cbl-co/cbl-header-light_iemzck?_a=BBEAEuXh0"
 						alt={SITE_DATA.name + ' logo'}
 						class="w-full object-contain"
 						width="860"
@@ -79,7 +78,7 @@
 									class="text-sm flex items-center gap-2 justify-start"
 								>
 									<Phone class="w-4 h-4" />
-									{SITE_DATA.phone.pretty}
+									Call
 								</Button>
 							</li>
 							<li>

@@ -42,7 +42,7 @@
 							class="w-full sm:w-auto justify-center text-base bg-orange-600 hover:bg-orange-700 text-white shadow-lg"
 						>
 							<Phone class="mr-2 h-5 w-5" />
-							Call Now
+							Call
 						</Button>
 
 						<Button
