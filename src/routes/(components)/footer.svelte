@@ -73,16 +73,6 @@
 						<ul role="list" class="mt-6 space-y-4">
 							<li>
 								<Button
-									href={'tel:' + SITE_DATA.phone.tel}
-									variant="link"
-									class="text-sm flex items-center gap-2 justify-start"
-								>
-									<Phone class="w-4 h-4" />
-									Call
-								</Button>
-							</li>
-							<li>
-								<Button
 									href={'mailto:' + SITE_DATA.email}
 									variant="link"
 									class="text-sm flex items-center gap-2 justify-start"

@@ -3,7 +3,7 @@
 	import { CldImage, type CldImageProps } from 'svelte-cloudinary';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import PaperPlane from 'svelte-radix/PaperPlane.svelte';
-	import { Phone, ArrowRight } from 'lucide-svelte';
+	import { Calendar, ArrowRight } from 'lucide-svelte';
 
 	interface Props {
 		title?: string;
@@ -38,11 +38,11 @@
 					<div class="mt-10 flex flex-col sm:flex-row gap-4">
 						<Button
 							variant="default"
-							href={'tel:' + SITE_DATA.phone.tel}
+							href={'mailto:' + SITE_DATA.email}
 							class="w-full sm:w-auto justify-center text-base bg-orange-600 hover:bg-orange-700 text-white shadow-lg"
 						>
-							<Phone class="mr-2 h-5 w-5" />
-							Call
+							<Calendar class="mr-2 h-5 w-5" />
+							Email Us
 						</Button>
 
 						<Button

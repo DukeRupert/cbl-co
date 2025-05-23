@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { SITE_DATA } from '$lib/global';
 	import Cta from '$lib/components/cta.svelte';
 	import SvelteSeo from 'svelte-seo';
 	import { ChevronRight, Shield, Clock, DollarSign, Activity, CheckCircle } from 'lucide-svelte';
@@ -72,7 +73,7 @@
 					</p>
 					<div class="mt-8">
 						<a
-							href="tel:+16618164291"
+							href={'mailto:' + SITE_DATA.email}
 							class="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center"
 						>
 							Request Assessment

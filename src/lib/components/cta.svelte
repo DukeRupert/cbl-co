@@ -1,25 +1,3 @@
-<!-- <script lang="ts">
-	import { Button } from '$lib/components/ui/button/index.js';
-</script>
-
- <div class="bg-gradient-to-t from-accent">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-		<div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
-			<div>
-				<h2 class="text-3xl font-bold">Ready to protect your infrastructure?</h2>
-				<p class="mt-4 text-lg text-muted-foreground">
-					Contact us today for a professional assessment and customized rehabilitation plan.
-				</p>
-			</div>
-			<div class="mt-8 lg:mt-0 flex justify-end">
-				<Button variant="default" href="tel:+16618164291">
-					Get started
-				</Button>
-			</div>
-		</div>
-	</div>
-</div> -->
-
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { SITE_DATA } from '$lib/global';
@@ -90,22 +68,11 @@
 				<div class="bg-white rounded-lg shadow-xl p-8 max-w-md">
 					<h3 class="text-xl font-bold text-gray-900 mb-4">Get Started Today</h3>
 					<p class="text-gray-600 mb-6">Schedule a consultation with our infrastructure experts.</p>
-
-					<!-- Primary CTA Button -->
-					<Button
-						variant="default"
-						href={'tel:' + SITE_DATA.phone.tel}
-						class="w-full justify-center bg-orange-600 hover:bg-orange-700 text-white transition-all shadow mb-4"
-					>
-						<Phone class="mr-2 h-5 w-5" />
-						Call
-					</Button>
-
 					<!-- Secondary CTA Button -->
 					<Button
-						variant="outline"
+						variant="default"
 						href={'mailto:' + SITE_DATA.email}
-						class="w-full justify-center border-orange-200 text-orange-700 hover:bg-orange-50"
+						class="w-full justify-center bg-orange-600 hover:bg-orange-700 text-white transition-all shadow mb-4"
 					>
 						<Calendar class="mr-2 h-5 w-5" />
 						Schedule an Assessment
